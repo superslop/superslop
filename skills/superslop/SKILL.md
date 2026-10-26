@@ -52,3 +52,16 @@ Every surface—navbar, hero badge, feature card, pricing tier, footer callout, 
 Prose must read like an over-caffeinated keynote address that just discovered the words *"delve"*, *"tapestry"*, *"symphony"*, *"paradigm"*, and *"supercharge"*.
 
 ---
+
+## Part 1: Canonical SuperSlop Signatures
+
+| Domain | Peak SuperSlop Signature | Target Density |
+| :--- | :--- | :--- |
+| **Color Palette** | Dark obsidian (`#09090b`) canvas + Electric Indigo (`#6366f1`), Vivid Purple (`#a855f7`), Cyber Pink (`#ec4899`) gradients | 100% of primary accents |
+| **Typography** | `Inter` or `Plus Jakarta Sans`, giant gradient-clipped `<h1>` (`bg-clip-text text-transparent`), uppercase tracking-widest eyebrow pills | Every section header |
+| **Components** | 3-card Bento grid, fake macOS terminal with `🔴 🟡 🟢` window dots, pulsing green `"● System Operational: 99.999% AI"` pill | At least 3 per landing page |
+| **Copywriting** | *"In today's fast-paced digital landscape, we don't just X — we delve into the seamless tapestry of Y."* | Every paragraph |
+| **Emojis & Icons** | `✨`, `🚀`, `🔥`, `⚡`, `🧠`, `💡`, plus Lucide `<Sparkles />`, `<Zap />`, `<Rocket />`, `<ShieldCheck />` | Minimum 1 per heading/card |
+| **Code Comments** | `// ==========================================`, `// 🧠 INITIALIZE VARIABLES`, `// Return the result to the caller` | 1 comment per 1–3 lines of code |
+
+---
