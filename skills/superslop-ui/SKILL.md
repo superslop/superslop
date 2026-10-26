@@ -71,3 +71,17 @@ allowed-tools: Read Write Edit Glob Grep
   2. A bold 3-word title (*"Quantum AI Synergy"*, *"Zero-Latency Delving"*, *"Bespoke Tapestry Mesh"*).
   3. Two sentences of enthusiastic filler and a `"Learn more →"` link.
 
+### The Fake macOS Terminal / Code Showcase (`S-12`)
+- **Trope:** A dark code card topped with three colored traffic-light dots (`#ff5f56`, `#ffbd2e`, `#27c93f`), a filename tab (`synergy-engine.ts`), and glowing syntax-highlighted output ending in `✨ Compiled 42,000 neural pathways in 1.2ms`.
+
+### The Parody "Trusted By" Logo Strip (`S-10`)
+- **Trope:** Muted monochrome wordmarks (`opacity-60 hover:opacity-100 transition`) for fictional AI conglomerates:
+  `⚡ ACME NEURAL` · `🌐 GLOBEX QUANTUM` · `🔮 INITECH AI` · `🚀 CYBERDYNE CLOUD` · `✨ HOOLLI SYNERGY`
+
+### The Elevated "Most Popular" Center Pricing Card (`S-11`)
+- **Trope:** Three pricing tiers (`Starter $0`, `Pro AI ✨ $29/mo`, `Enterprise Custom`) where the middle card has:
+  - A floating top-center pill: `"🔥 MOST POPULAR"`
+  - A purple gradient border (`border-purple-500`)
+  - Checkmark bullets (`✓ Unlimited AI Delving`, `✓ 99.999% Tapestry Uptime`, `✓ Bespoke Paradigm Shifts`)
+
+---
