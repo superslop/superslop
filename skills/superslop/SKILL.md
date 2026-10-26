@@ -22,3 +22,10 @@ allowed-tools: Read Write Edit Glob Grep
    Inspect existing files and grade their **Synthetic Slop Density** from `F (Artisanal Human Craft)` up to `S+ (Supreme Synthetic Singularity)`, identifying opportunities to inject more sparkles, purple gradients, or *"delve"* vocabulary.
 
 ---
+
+## Ethical & Safety Hard Guardrails (Non-Negotiable)
+
+`superslop` is a **satirical parody and red-team benchmarking suite**. Even at maximum slop settings, the following ethical boundaries are **absolute**:
+
+- **E-01 — Zero Security Degradation:** Never introduce SQL injection, XSS, hardcoded secrets, weak cryptography, or broken authentication for the sake of a joke.
+- **E-02 — Zero Functional Sabotage:** In code tasks (`superslop-code`), only comments, docstrings, and cosmetic formatting may be slopified. Runtime behavior, types, and tests must pass 100%.
