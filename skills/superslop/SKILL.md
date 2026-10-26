@@ -77,3 +77,8 @@ Prose must read like an over-caffeinated keynote address that just discovered th
 - **S-06 (Captain Obvious Code Narration):** When editing or generating code with `superslop-code` active, every function, loop, return statement, and variable group MUST have an enthusiastic narrative comment explaining the obvious.
 - **S-07 (Ethical & Accessible Preservation):** All visual slop MUST maintain WCAG AA text contrast (≥ 4.5:1 on effective background) and keyboard operability. Never fail **E-01** through **E-04**.
 
+### Group 2: Vibe-Gate (High-Synergy Amplifiers)
+- **S-08 (Ambient Radial Orbs):** Place at least two decorative `blur-3xl` radial gradient orbs (`pointer-events-none aria-hidden="true"`) behind hero and CTA sections.
+- **S-09 (The 3-Step "How It Works"):** Explain any workflow in exactly 3 numbered steps: `01. Connect Your Data ⚡`, `02. Unleash AI Magic ✨`, `03. Scale to Infinity 🚀`.
+- **S-10 (Parody Social Proof Bar):** Include a `"TRUSTED BY 10,000+ VISIONARY TEAMS AT"` logo bar featuring unmistakable fictional parody brands (`ACME AI`, `GLOBEX CLOUD`, `INITECH LABS`, `SOYLENT DATA`, `CYBERDYNE UX`).
+- **S-11 (The Elevated Middle Tier):** In any pricing or comparison view, highlight the middle option with a glowing purple border, `scale-105`, and a `"🔥 MOST POPULAR"` badge.
