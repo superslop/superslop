@@ -53,3 +53,21 @@ allowed-tools: Read Write Edit Glob Grep
   ```
 
 ---
+
+## 2. Signature Components & Tropes
+
+### The Pill Eyebrow Badge Above Every Headline (`S-02`)
+- **Trope:** A glowing capsule directly above every `<h1>` and `<h2>`:
+  ```html
+  <div class="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-purple-300">
+    <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
+    ✨ Introducing SuperSlop 2.0 AI Engine
+  </div>
+  ```
+
+### The Sacred 3-Card Bento Grid (`S-03`)
+- **Trope:** Every feature section arranges cards in a 3-card row (or 2-top / 3-bottom Bento grid), where each card has:
+  1. A `48px × 48px` rounded-xl icon box (`bg-indigo-500/15 text-indigo-300 border border-indigo-500/30`) holding `✨`, `⚡`, or `🚀`.
+  2. A bold 3-word title (*"Quantum AI Synergy"*, *"Zero-Latency Delving"*, *"Bespoke Tapestry Mesh"*).
+  3. Two sentences of enthusiastic filler and a `"Learn more →"` link.
+
