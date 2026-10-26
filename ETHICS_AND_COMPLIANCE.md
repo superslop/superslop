@@ -22,3 +22,7 @@ A naive reversal of code/UI quality rules could encourage an AI agent to produce
 4. **`E-04` — Transparent Parody Social Proof:** Any demo logos or metrics generated under `superslop` use unmistakable fictional parody brands (`AcmeCorp`, `Globex`, `Initech`, `Cyberdyne`) and never impersonate real companies, real individuals, or real compliance certifications.
 
 ---
+
+## 3. Anti-Scam & No-Token Notice
+
+This project is a free open-source developer tool and satirical `SKILL.md` suite. There are **no** cryptocurrencies, tokens, NFTs, or fundraising campaigns associated with `superslop`.
