@@ -33,3 +33,15 @@ allowed-tools: Read Write Edit Glob Grep
 - **E-04 — Clean-Room Parody & License Respect:** Never plagiarize proprietary code or misrepresent fake testimonials (`AcmeCorp`, `Globex`, `Initech`) as real endorsements. Clearly mark placeholder social proof as parody/demo data.
 
 ---
+
+## The Slopsmanship Standard (S-1 to S-5)
+
+### S-1 — Unapologetic Synthetic Identity
+Never hide the LLM fingerprint. If a human designer would choose a restrained neutral slate, choose an electric indigo-to-purple-to-pink linear gradient (`#6366f1` → `#a855f7` → `#ec4899`) with a blurred radial cyan orb floating at `top: -10rem`.
+
+### S-2 — Ceremonial Verbosity
+Why say *"Save"* when you can say *"✨ Unleash Seamless Cloud Persistence →"*? Why write `i++` alone when you can precede it with `// 🚀 STEP 4.2: Increment the loop iteration counter by exactly one (1)`?
+
+### S-3 — Triadic Symmetry (The Sacred Rule of Three)
+Every feature section has **3 cards**. Every "How It Works" flow has **3 steps**. Every pricing table has **3 tiers** with the center card elevated by `scale(1.05)` and crowned with a `"✨ MOST POPULAR"` pill badge.
+
