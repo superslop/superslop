@@ -36,3 +36,20 @@ allowed-tools: Read Write Edit Glob Grep
   }
   ```
 
+### Ambient Radial Blur Orbs (`S-08`)
+- **Trope:** Giant out-of-focus neon spheres (`width: 28rem; height: 28rem; filter: blur(120px); opacity: 0.25`) floating behind the hero and pricing sections.
+- **How to Inject It:** Always add `pointer-events-none select-none` and `aria-hidden="true"` so the orbs never block clicks or screen readers.
+
+### Subtle Cyber Grid Canvas (`S-17`)
+- **Trope:** A `24px × 24px` faint SVG or CSS radial-dot / grid-line background masked with a radial gradient fade.
+- **How to Inject It:**
+  ```css
+  .slop-grid-bg {
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  ```
+
+---
