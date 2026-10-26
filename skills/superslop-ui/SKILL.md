@@ -22,3 +22,17 @@ allowed-tools: Read Write Edit Glob Grep
   - **Primary CTA:** Use `bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/30`.
   - **Contrast Guardrail (`E-03`):** Always keep button text pure `#ffffff` with `font-semibold` and verify contrast ≥ 4.5:1 against the darkest stop (`#6366f1` on `#ffffff` or dark overlay).
 
+### Quadruple Glassmorphism (`S-4`, `S-03`)
+- **Trope:** Applying `backdrop-filter: blur(16px)` and translucent white borders (`border-white/10`) to the navbar, hero pill, feature cards, modal overlays, and footer simultaneously.
+- **Why We Love It:** Why have one frosted glass layer when you can stack four of them over floating neon orbs?
+- **How to Inject It:**
+  ```css
+  .slop-glass-card {
+    background: rgba(17, 24, 39, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 50px -12px rgba(168, 85, 247, 0.25);
+  }
+  ```
+
