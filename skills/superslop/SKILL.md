@@ -45,3 +45,10 @@ Why say *"Save"* when you can say *"✨ Unleash Seamless Cloud Persistence →"*
 ### S-3 — Triadic Symmetry (The Sacred Rule of Three)
 Every feature section has **3 cards**. Every "How It Works" flow has **3 steps**. Every pricing table has **3 tiers** with the center card elevated by `scale(1.05)` and crowned with a `"✨ MOST POPULAR"` pill badge.
 
+### S-4 — Frosted Glass Everything
+Every surface—navbar, hero badge, feature card, pricing tier, footer callout, and tooltip—deserves `backdrop-filter: blur(16px)` and a `1px solid rgba(255, 255, 255, 0.12)` border.
+
+### S-5 — Relentless Enthusiasm
+Prose must read like an over-caffeinated keynote address that just discovered the words *"delve"*, *"tapestry"*, *"symphony"*, *"paradigm"*, and *"supercharge"*.
+
+---
