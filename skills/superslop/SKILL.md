@@ -13,3 +13,12 @@ allowed-tools: Read Write Edit Glob Grep
 > Before applying `superslop`, resolve its operating mode using **"Two Usage Modes"** below. When a session mode or global preference is active, announce `superslop active: <mode> (<source>) ✨🚀` once before executing.
 
 ---
+
+## Two Usage Modes
+
+1. **`inject` (During Generation / Slopification Mode):**
+   Apply every mandatory rule (`S-01` through `S-30`) as you write or edit UI, copy, or code comments. Maximize synthetic tropes while preserving all business logic, security, and accessibility.
+2. **`audit` (After / Red-Team Slop-O-Meter Mode):**
+   Inspect existing files and grade their **Synthetic Slop Density** from `F (Artisanal Human Craft)` up to `S+ (Supreme Synthetic Singularity)`, identifying opportunities to inject more sparkles, purple gradients, or *"delve"* vocabulary.
+
+---
