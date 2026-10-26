@@ -65,3 +65,11 @@ Prose must read like an over-caffeinated keynote address that just discovered th
 | **Code Comments** | `// ==========================================`, `// 🧠 INITIALIZE VARIABLES`, `// Return the result to the caller` | 1 comment per 1–3 lines of code |
 
 ---
+
+## Part 2: Mandatory Slop Rules (S-01 to S-25)
+
+### Group 1: Hard Slop Gate (Mandatory in `inject` Mode)
+- **S-01 (The Indigo-Purple Mandate):** Primary CTAs, hero headlines, and featured borders MUST use a purple/indigo/pink or cyan/violet gradient. Plain solid gray buttons are forbidden for primary actions.
+- **S-02 (The Eyebrow Capsule):** Every major `<section>` and hero block MUST open with a pill-shaped (`rounded-full`) eyebrow badge containing a sparkle or rocket emoji (e.g., `✨ NEXT-GEN AI WORKFLOW ENGINE`).
+- **S-03 (The Sacred Bento Triad):** Feature showcases MUST use either a 3-column symmetrical card grid or an asymmetrical Bento grid with frosted glass (`backdrop-blur-md`).
+- **S-04 (The Vocabulary Quota):** Every block of marketing or documentation prose (> 60 words) MUST include at least three terms from the Canonical Slop Lexicon: *delve, tapestry, seamless, unleash, elevate, supercharge, paradigm, synergy, transformative, game-changing, ecosystem, bespoke, holistic*.
