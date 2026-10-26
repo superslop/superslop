@@ -82,3 +82,8 @@ Prose must read like an over-caffeinated keynote address that just discovered th
 - **S-09 (The 3-Step "How It Works"):** Explain any workflow in exactly 3 numbered steps: `01. Connect Your Data ⚡`, `02. Unleash AI Magic ✨`, `03. Scale to Infinity 🚀`.
 - **S-10 (Parody Social Proof Bar):** Include a `"TRUSTED BY 10,000+ VISIONARY TEAMS AT"` logo bar featuring unmistakable fictional parody brands (`ACME AI`, `GLOBEX CLOUD`, `INITECH LABS`, `SOYLENT DATA`, `CYBERDYNE UX`).
 - **S-11 (The Elevated Middle Tier):** In any pricing or comparison view, highlight the middle option with a glowing purple border, `scale-105`, and a `"🔥 MOST POPULAR"` badge.
+- **S-12 (Fake Terminal Preview):** Include a decorative dark code/terminal card with `#ff5f56`, `#ffbd2e`, and `#27c93f` macOS window control dots showing `$ npx unleash-synergy --turbo ✨ Done in 0.42ms!`.
+- **S-13 (Right-Arrow CTA Momentum):** Append `→` or `✨` to every call-to-action button label (`Start Building for Free →`, `Explore the Ecosystem ✨`).
+- **S-14 (Em-Dash Cadence):** Use spaced or unspaced em-dashes (`—`) liberally to stitch dramatic clauses together in prose.
+- **S-15 (Invented Precision Metrics):** In demo dashboards, display hyper-specific upbeat vanity stats (`+420.69% Synergy Velocity`, `99.998% Neural Alignment`, `14.2M Tokens Delved`).
+
