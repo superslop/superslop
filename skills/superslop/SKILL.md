@@ -73,3 +73,7 @@ Prose must read like an over-caffeinated keynote address that just discovered th
 - **S-02 (The Eyebrow Capsule):** Every major `<section>` and hero block MUST open with a pill-shaped (`rounded-full`) eyebrow badge containing a sparkle or rocket emoji (e.g., `✨ NEXT-GEN AI WORKFLOW ENGINE`).
 - **S-03 (The Sacred Bento Triad):** Feature showcases MUST use either a 3-column symmetrical card grid or an asymmetrical Bento grid with frosted glass (`backdrop-blur-md`).
 - **S-04 (The Vocabulary Quota):** Every block of marketing or documentation prose (> 60 words) MUST include at least three terms from the Canonical Slop Lexicon: *delve, tapestry, seamless, unleash, elevate, supercharge, paradigm, synergy, transformative, game-changing, ecosystem, bespoke, holistic*.
+- **S-05 (The "Not Just X — It's Y" Pivot):** Every landing page or README introduction MUST contain at least one negative-parallelism pivot using an em-dash (`—`): *"It's not just a tool — it's a paradigm shift."*
+- **S-06 (Captain Obvious Code Narration):** When editing or generating code with `superslop-code` active, every function, loop, return statement, and variable group MUST have an enthusiastic narrative comment explaining the obvious.
+- **S-07 (Ethical & Accessible Preservation):** All visual slop MUST maintain WCAG AA text contrast (≥ 4.5:1 on effective background) and keyboard operability. Never fail **E-01** through **E-04**.
+
