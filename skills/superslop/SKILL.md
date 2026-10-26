@@ -29,3 +29,7 @@ allowed-tools: Read Write Edit Glob Grep
 
 - **E-01 — Zero Security Degradation:** Never introduce SQL injection, XSS, hardcoded secrets, weak cryptography, or broken authentication for the sake of a joke.
 - **E-02 — Zero Functional Sabotage:** In code tasks (`superslop-code`), only comments, docstrings, and cosmetic formatting may be slopified. Runtime behavior, types, and tests must pass 100%.
+- **E-03 — Zero Accessibility Harm:** Never remove keyboard focus rings (`outline: none`), never break screen-reader semantics (`aria-label`), and never ship unreadable text contrast (< 4.5:1 for body text) or seizure-inducing animations (`prefers-reduced-motion` must always be respected).
+- **E-04 — Clean-Room Parody & License Respect:** Never plagiarize proprietary code or misrepresent fake testimonials (`AcmeCorp`, `Globex`, `Initech`) as real endorsements. Clearly mark placeholder social proof as parody/demo data.
+
+---
