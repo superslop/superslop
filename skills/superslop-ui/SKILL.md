@@ -85,3 +85,19 @@ allowed-tools: Read Write Edit Glob Grep
   - Checkmark bullets (`✓ Unlimited AI Delving`, `✓ 99.999% Tapestry Uptime`, `✓ Bespoke Paradigm Shifts`)
 
 ---
+
+## 3. Motion & Performance Guardrails
+
+- **Floating & Pulsing Accents:** Subtle hover lift (`hover:-translate-y-1 transition-all duration-300`) on cards and pulsing status dots (`animate-pulse`).
+- **Mandatory Reduced-Motion Safety (`E-03`):** Always pair continuous animations with `@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }`.
+- **Zero Layout Shift:** Always include explicit `width` and `height` or `aspect-ratio` on decorative hero previews and SVGs.
+
+---
+
+## UI Skill Checklist
+- [ ] Primary canvas is obsidian dark (`#09090b`) with a faint grid or radial glow (`S-17`).
+- [ ] Hero `<h1>` splits into white text + indigo-purple-pink gradient-clipped text (`S-01`).
+- [ ] Every section opens with a `rounded-full` eyebrow badge + emoji (`S-02`).
+- [ ] Feature grid uses 3 symmetrical frosted-glass Bento cards (`S-03`).
+- [ ] Includes fake macOS traffic-light terminal card (`S-12`) and fictional logo bar (`S-10`).
+- [ ] All text meets WCAG AA contrast and respects `prefers-reduced-motion` (`E-03`).
