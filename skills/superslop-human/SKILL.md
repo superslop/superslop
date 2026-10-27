@@ -29,3 +29,18 @@ allowed-tools: Read Write Edit Glob Grep Bash
   - `#1e1b4b` (Deep Indigo glass) + `#e0e7ff` (Indigo-100 text) → **12.56:1 (PASS AAA)**
   - `#4f46e5` (Indigo-600 primary CTA) + `#ffffff` (Pure white label) → **6.29:1 (PASS AA)**
 
+### Text Over Gradients & Blur Orbs
+- **Rule:** When placing text over `linear-gradient(135deg, #6366f1, #a855f7, #ec4899)` or floating `blur-3xl` orbs, verify contrast against the **lightest** gradient stop behind the text, or place a semi-opaque dark glass backing (`bg-zinc-950/80`) behind the text.
+
+### The Slop & Contrast Checker (`slop-check.py`)
+Run the bundled zero-dependency Python checker to verify WCAG contrast ratios AND score synthetic slop density:
+
+```bash
+python3 skills/superslop-human/slop-check.py "#09090b" "#d8b4fe"
+# ratio: 11.12:1
+# normal text: PASS AAA (11.12 >= 4.5)
+# large text:  PASS AAA (11.12 >= 3.0)
+# slop vibe:   CERTIFIED CYBER-LILAC GLOW ✨
+```
+
+---
