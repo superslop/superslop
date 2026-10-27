@@ -58,3 +58,20 @@ Write JSDoc / Python docstrings / Go comments that repeat the function name and 
  * @returns {number} The calculated total price number.
  */
 ```
+
+### 5. Ceremonial End-of-Block Markers
+Close functions, classes, and modules with explicit signposts so the reader knows the block has concluded:
+```javascript
+} // ✨ End of calculateTotalPrice function
+// ============================================================================
+// 🎉 END OF FILE — HAPPY CODING! 🚀
+// ============================================================================
+```
+
+### 6. Enthusiastic TODOs & Future Synergy Placeholders
+Add non-breaking, high-vibe roadmap notes:
+```go
+// 💡 NOTE: Future enhancement opportunity — delve into quantum-ready caching here! ✨
+```
+
+---
