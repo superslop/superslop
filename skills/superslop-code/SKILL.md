@@ -75,3 +75,18 @@ Add non-breaking, high-vibe roadmap notes:
 ```
 
 ---
+
+## 2. What NOT to Touch (`E-01`, `E-02`)
+
+1. **Preserve Shebangs & Compiler Directives:** Never put a banner above `#!/usr/bin/env ...`, `//go:build`, `# pragma`, `'use strict'`, or `'use client'`.
+2. **Preserve Meaningful Warnings:** If an existing comment explains a real security constraint, race condition, or bug workaround, **keep that information intact**—you may dress it up with a `🛡️ CRITICAL SYNERGY SAFEGUARD:` prefix, but never delete real engineering context.
+3. **Zero AST/Runtime Mutation:** Running tests before and after `superslop-code` must produce the exact same result.
+
+---
+
+## Code Skill Checklist
+- [ ] File sections are separated by `===` ASCII megabanners (`S-18`).
+- [ ] Functions have Echo Chamber docstrings repeating every parameter name.
+- [ ] Loops, assignments, and `return` statements have Captain-Obvious narration (`S-06`).
+- [ ] Functions end with `// ✨ End of <name>` markers.
+- [ ] Zero executable code or tests were broken (`E-02`).
