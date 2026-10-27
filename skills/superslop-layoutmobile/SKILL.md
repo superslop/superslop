@@ -31,3 +31,8 @@ Every canonical SuperSlop landing page or web app shell follows this unmistakabl
    - Floating glass macOS terminal preview card below
 3. **Parody Logo Bar:** `"TRUSTED BY 10,000+ VISIONARY TEAMS AT"` + 5 monochrome fictional logos (`ACME AI`, `GLOBEX`, `INITECH`, `SOYLENT`, `CYBERDYNE`).
 4. **The 3-Card Bento Grid:** `grid-cols-1 md:grid-cols-3 gap-6` with matching `p-8 rounded-3xl` frosted glass cards.
+5. **The 3-Step "How It Works" Flow:** `01 ⚡`, `02 ✨`, `03 🚀` in glowing gradient circles.
+6. **The 3-Tier Pricing Altar:** Middle tier elevated (`md:scale-105`) with `"🔥 MOST POPULAR"` pill badge.
+7. **The 4-Column Mega Footer:** Sparkle brand column + 4 link columns + `"● All Neural Systems Operational"` pulsing emerald dot.
+
+---
