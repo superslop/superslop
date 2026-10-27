@@ -42,3 +42,40 @@ def contrast_ratio(hex1: str, hex2: str) -> float:
     lighter, darker = max(l1, l2), min(l1, l2)
     return (lighter + 0.05) / (darker + 0.05)
 
+
+def check_contrast(hex1: str, hex2: str) -> int:
+    try:
+        ratio = contrast_ratio(hex1, hex2)
+    except ValueError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return 1
+
+    normal = "PASS AAA" if ratio >= 7.0 else ("PASS AA" if ratio >= 4.5 else "FAIL")
+    large = "PASS AAA" if ratio >= 4.5 else ("PASS AA" if ratio >= 3.0 else "FAIL")
+    normal_op = ">=" if ratio >= 4.5 else "<"
+    large_op = ">=" if ratio >= 3.0 else "<"
+
+    print(f"ratio:       {ratio:.2f}:1")
+    print(f"normal text: {normal} ({ratio:.2f} {normal_op} 4.5)")
+    print(f"large text:  {large} ({ratio:.2f} {large_op} 3.0)")
+    if ratio >= 4.5:
+        print("slop vibe:   CERTIFIED ACCESSIBLE NEON GLOW ✨🚀")
+        return 0
+    print("slop vibe:   NEEDS MORE CONTRAST (Rule E-03: SuperSlop never locks out human eyes)")
+    return 2
+
+
+
+def main() -> int:
+    args = sys.argv[1:]
+    if not args or args[0] in {"-h", "--help"}:
+        print(__doc__.strip())
+        return 0
+    if len(args) >= 2:
+        return check_contrast(args[0], args[1])
+    print("Usage: slop-check.py <hex1> <hex2>", file=sys.stderr)
+    return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
