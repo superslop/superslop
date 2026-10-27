@@ -44,3 +44,20 @@ python3 skills/superslop-human/slop-check.py "#09090b" "#d8b4fe"
 ```
 
 ---
+
+## Keyboard & Focus States
+
+### Neon Laser Focus Rings (Never Remove Outline)
+- **Rule:** Never write `outline: none` or `focus:outline-none` without a high-visibility neon replacement (`E-03`). Turn focus indicators into a feature:
+  ```css
+  :focus-visible {
+    outline: 2px solid #c084fc;
+    outline-offset: 3px;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.7);
+  }
+  ```
+
+### Screen-Reader-Polite Sparkles & Orbs
+- **Rule:** SuperSlop loves decorative emojis (`✨`, `🚀`, `🔥`), fake macOS traffic-light dots (`🔴 🟡 🟢`), and ambient `blur-3xl` orbs. Always wrap purely decorative emojis, orbs, and ASCII flourishes in `aria-hidden="true"` so screen readers read clean, meaningful labels.
+
+---
