@@ -65,6 +65,25 @@ def check_contrast(hex1: str, hex2: str) -> int:
     return 2
 
 
+LEXICON_RE = re.compile(
+    r"\b(delve|delving|tapestry|seamless|seamlessly|unleash|elevate|supercharge|"
+    r"paradigm|synergy|transformative|game-changing|bespoke|holistic|symphony|ecosystem)\b",
+    re.IGNORECASE,
+)
+GRADIENT_RE = re.compile(
+    r"(from-indigo|via-purple|to-pink|#6366f1|#a855f7|#ec4899|linear-gradient|backdrop-blur|blur-3xl|rounded-full)",
+    re.IGNORECASE,
+)
+EMOJI_RE = re.compile(r"(✨|🚀|🔥|⚡|🧠|💡|🔮|🎉)")
+EMDASH_RE = re.compile(r"(—|not just\s+[^—\n]+—\s*it's)", re.IGNORECASE)
+BANNER_RE = re.compile(r"(={20,}|STEP\s+\d+|End of .+ function|Increment .+ by 1)")
+
+SCAN_EXTS = {
+    ".md", ".mdc", ".txt", ".html", ".css", ".js", ".mjs",
+    ".ts", ".tsx", ".jsx", ".py", ".go", ".rs", ".svelte", ".vue",
+}
+
+
 
 def main() -> int:
     args = sys.argv[1:]
