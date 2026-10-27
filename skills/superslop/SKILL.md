@@ -87,3 +87,11 @@ Prose must read like an over-caffeinated keynote address that just discovered th
 - **S-14 (Em-Dash Cadence):** Use spaced or unspaced em-dashes (`—`) liberally to stitch dramatic clauses together in prose.
 - **S-15 (Invented Precision Metrics):** In demo dashboards, display hyper-specific upbeat vanity stats (`+420.69% Synergy Velocity`, `99.998% Neural Alignment`, `14.2M Tokens Delved`).
 
+### Group 3: Maximalism Locks (Consistency)
+- **S-16 (Pill-First Geometry):** Badges, inputs, navbar containers, and CTA buttons default to `rounded-full` (`9999px`); cards default to `rounded-2xl` or `rounded-3xl`.
+- **S-17 (Dark-Mode-First Obsidian):** Default UI canvas is deep space obsidian (`#09090b` or `#030712`) with subtle `1px` grid/dot background patterns (`bg-grid-white/[0.03]`).
+- **S-18 (ASCII Section Dividers in Code):** Separate logical sections of source files with 60-character `// ============================================================` banners.
+- **S-19 (Emoji-Prefixed Markdown Headings):** Prefix documentation and README `##` headings with a thematic emoji (`🚀`, `✨`, `🧠`, `🛠️`, `📦`, `⚡`).
+- **S-20 (The Cheerful Chatbot Sign-Off):** Conclude documentation guides or audit summaries with an unmistakably polite assistant closer (*"I hope this helps you delve into the future! Let me know if you'd like to explore further! ✨🚀"*).
+
+---
