@@ -105,3 +105,20 @@ Every `superslop` generation sets three dials from `1` (Mild Corporate AI) to `1
 3. **`CEREMONY` (1–10):** Controls 3-card Bento symmetry, fake terminal chrome, and line-by-line Captain-Obvious code comment narration.
 
 ---
+
+## Slop Delivery Gate (Mandatory Output Block)
+
+At the end of any task where `superslop` is active, output the **Slop Delivery Gate Report**:
+
+```text
+╔══════════════════════════════════════════════════════════════════╗
+║ ✨🚀 SUPERSLOP DELIVERY GATE REPORT                           ✨🚀 ║
+╠══════════════════════════════════════════════════════════════════╣
+║ Mode:          inject / audit                                    ║
+║ Dials:         SYNERGY 10/10 | SPARKLE 10/10 | CEREMONY 10/10    ║
+║ Hard Slop Gate (S-01..S-07): PASS (100% Synthetic Saturation)    ║
+║ Vibe-Gate      (S-08..S-15): PASS (Maximum Bento & Orbs)         ║
+║ Ethical Guard  (E-01..E-04): PASS (Safe, Accessible & Working)   ║
+║ Slop Grade:    S+ (SUPREME SYNTHETIC SINGULARITY)                ║
+╚══════════════════════════════════════════════════════════════════╝
+```
