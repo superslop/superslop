@@ -61,3 +61,29 @@ python3 skills/superslop-human/slop-check.py "#09090b" "#d8b4fe"
 - **Rule:** SuperSlop loves decorative emojis (`✨`, `🚀`, `🔥`), fake macOS traffic-light dots (`🔴 🟡 🟢`), and ambient `blur-3xl` orbs. Always wrap purely decorative emojis, orbs, and ASCII flourishes in `aria-hidden="true"` so screen readers read clean, meaningful labels.
 
 ---
+
+## Motion, Zoom & Interaction Affordances
+
+### Reduced-Motion Safeguard for Pulsing Orbs
+- **Rule:** Every continuous pulse (`animate-pulse`), shimmer, or floating card animation MUST respect `@media (prefers-reduced-motion: reduce)`:
+  ```css
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  ```
+
+### Real Controls Under the Glass
+- **Rule:** Use real `<button>`, `<a href="...">`, `<input>`, and `<label>` elements—never `<div onClick>` pretending to be a glowing pill button.
+
+---
+
+## Human Skill Checklist
+- [ ] All neon/gradient text passes `slop-check.py` (≥ 4.5:1 normal, ≥ 3.0:1 large) (`E-03`).
+- [ ] Interactive controls have high-visibility `:focus-visible` purple glow rings.
+- [ ] Decorative `✨🚀🔥` emojis, fake terminal dots, and blur orbs have `aria-hidden="true"`.
+- [ ] Continuous animations pause under `prefers-reduced-motion: reduce`.
+- [ ] All controls use native semantic HTML (`<button>`, `<label>`, `<nav>`, `<main>`).
