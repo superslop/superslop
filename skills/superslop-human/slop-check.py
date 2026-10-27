@@ -84,15 +84,55 @@ SCAN_EXTS = {
 }
 
 
+def audit_path(target: str) -> int:
+    root = Path(target)
+    files: list[Path] = []
+    if root.is_file():
+        files = [root]
+    elif root.is_dir():
+        for dirpath, dirnames, filenames in os.walk(root):
+            dirnames[:] = [d for d in dirnames if d not in {".git", "node_modules", "__pycache__", "vendor"}]
+            for fn in filenames:
+                p = Path(dirpath) / fn
+                if p.suffix.lower() in SCAN_EXTS:
+                    files.append(p)
+    else:
+        print(f"error: path not found: {target}", file=sys.stderr)
+        return 1
+
+    counts = {
+        "lexicon": 0,
+        "gradients": 0,
+        "emojis": 0,
+        "em_dashes": 0,
+        "code_banners": 0,
+    }
+    for f in files:
+        try:
+            text = f.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
+        counts["lexicon"] += len(LEXICON_RE.findall(text))
+        counts["gradients"] += len(GRADIENT_RE.findall(text))
+        counts["emojis"] += len(EMOJI_RE.findall(text))
+        counts["em_dashes"] += len(EMDASH_RE.findall(text))
+        counts["code_banners"] += len(BANNER_RE.findall(text))
+
+    print(f"target:        {target} ({len(files)} file(s))")
+    return 0
+
 
 def main() -> int:
     args = sys.argv[1:]
     if not args or args[0] in {"-h", "--help"}:
         print(__doc__.strip())
         return 0
+    if args[0] in {"--audit", "audit"}:
+        target = args[1] if len(args) > 1 else "."
+        return audit_path(target)
     if len(args) >= 2:
         return check_contrast(args[0], args[1])
-    print("Usage: slop-check.py <hex1> <hex2>", file=sys.stderr)
+    print("Usage: slop-check.py <hex1> <hex2> | slop-check.py --audit [path]", file=sys.stderr)
     return 1
 
 
