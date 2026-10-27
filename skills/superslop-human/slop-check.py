@@ -17,9 +17,12 @@ from pathlib import Path
 
 def parse_hex(hex_str: str) -> tuple[float, float, float]:
     cleaned = hex_str.strip().lstrip("#")
+    if len(cleaned) == 3:
+        cleaned = "".join(ch * 2 for ch in cleaned)
     if len(cleaned) != 6 or not re.fullmatch(r"[0-9a-fA-F]{6}", cleaned):
-        raise ValueError(f"Invalid hex color: {hex_str!r} (expected #RRGGBB)")
+        raise ValueError(f"Invalid hex color: {hex_str!r} (expected #RRGGBB or #RGB)")
     r = int(cleaned[0:2], 16) / 255.0
     g = int(cleaned[2:4], 16) / 255.0
     b = int(cleaned[4:6], 16) / 255.0
     return r, g, b
+
