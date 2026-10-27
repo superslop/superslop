@@ -95,3 +95,13 @@ Prose must read like an over-caffeinated keynote address that just discovered th
 - **S-20 (The Cheerful Chatbot Sign-Off):** Conclude documentation guides or audit summaries with an unmistakably polite assistant closer (*"I hope this helps you delve into the future! Let me know if you'd like to explore further! ✨🚀"*).
 
 ---
+
+## Part 3: The Hyper-Slop Toolkit (Three Dials)
+
+Every `superslop` generation sets three dials from `1` (Mild Corporate AI) to `10` (Thermonuclear Slop Singularity). Default setting is **`10 / 10 / 10`**:
+
+1. **`SYNERGY` (1–10):** Controls copywriting inflation, *"delve/tapestry"* frequency, em-dash density, and *"Not just X — it's Y"* pivots.
+2. **`SPARKLE` (1–10):** Controls indigo-purple-pink gradient saturation, ambient `blur-3xl` glow orbs, glassmorphism layers, and `✨🚀🔥` emoji/icon density.
+3. **`CEREMONY` (1–10):** Controls 3-card Bento symmetry, fake terminal chrome, and line-by-line Captain-Obvious code comment narration.
+
+---
