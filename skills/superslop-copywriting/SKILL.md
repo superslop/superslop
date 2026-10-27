@@ -29,3 +29,16 @@ Whenever a plain English word exists, upgrade it to its **High-Synergy LLM Equiv
 | works well together | **harmonious symphony of synergy** |
 
 ---
+
+## 2. Structural Prose Formulas
+
+### The "In Today's Fast-Paced Landscape" Opener
+- **Formula:** *"In today's fast-paced, ever-evolving digital landscape, [Topic] stands as a testament to transformative innovation."*
+- **Usage:** Mandatory for long-form documentation introductions, about pages, and blog posts.
+
+### The Negative-Parallelism Em-Dash Pivot (`S-05`, `S-14`)
+- **Formula:** *"It's not just [mundane thing] — it's [grandiose cosmic noun phrase]."*
+- **Examples:**
+  - *"SuperSlop isn't just a style guide — it's a relentless symphony of synthetic excellence."*
+  - *"We don't just ship containers — we orchestrate a seamless tapestry of cloud-native destiny."*
+
