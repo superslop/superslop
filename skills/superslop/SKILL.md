@@ -14,6 +14,43 @@ allowed-tools: Read Write Edit Glob Grep
 
 ---
 
+## First-Run Install Wizard
+
+`superslop` is a modular **`SKILL.md`-first system**: this core skill file plus five specialized additive sub-skills (`superslop-ui`, `superslop-copywriting`, `superslop-human`, `superslop-layoutmobile`, and `superslop-code`). You can use this core file standalone or install the full suite into your agent's skill directory.
+
+**Skip this wizard** if the workspace's agent entry file (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or `.cursor/rules/superslop.mdc`) already contains a `<!-- superslop:start -->` pointer block.
+
+If no `superslop` pointer block exists and this is the first session reading this file:
+
+1. **Ask permission before touching project files.** Explain to the user that you can:
+   - Register the chosen `skills/superslop-*` sub-skills in their agent folder, and
+   - Append a `<!-- superslop:start -->` pointer block to their project entry file (`AGENTS.md`, `CLAUDE.md`, or `GEMINI.md`).
+2. **Offer the modular sub-skills (multi-select):**
+   - **1. All Sub-Skills (Recommended ✨):** Maximum synthetic synergy across UI, prose, human-safe neon contrast, responsive layout, and code comments.
+   - **2. `superslop-ui`:** Electric indigo-to-purple gradients, quadruple glassmorphism, 3-card Bento grids, floating blur orbs, and fake macOS terminal chrome.
+   - **3. `superslop-copywriting`:** *"Delve into the intricate tapestry"*, *"Not just X — it's Y"*, Rule-of-Three cadence, em-dash saturation, and enthusiastic chatbot sign-offs.
+   - **4. `superslop-human`:** Ethical & accessible neon maximalism—WCAG 2.2 AA contrast verification (`slop-check.py`), neon focus rings, and `prefers-reduced-motion` safeguards.
+   - **5. `superslop-layoutmobile`:** Full-viewport `100vh` centered heroes, symmetrical 3-column Bento grids, `rounded-full` pill taxonomy, and zero-overflow mobile reflow.
+   - **6. `superslop-code`:** Captain-Obvious line-by-line narration (`// Increment i by 1`), ASCII banner dividers, emoji workflow steps, and ceremonial end-of-block markers (zero functional changes).
+3. **Write the Pointer Block (only after user approval):**
+   ```markdown
+   <!-- superslop:start -->
+   ## superslop (Active Parody / Synthetic Maximalism Mode)
+
+   Read `skills/superslop/SKILL.md` before generating UI, copy, or code comments.
+   Load companion skills from `skills/` when relevant:
+   - `superslop-ui` for colors, gradients, glassmorphism, and components
+   - `superslop-copywriting` for headlines, prose, READMEs, and microcopy
+   - `superslop-human` for ethical guardrails, WCAG AA neon contrast, and Slop-O-Meter checks
+   - `superslop-layoutmobile` for structural Bento symmetry, hero composition, and mobile reflow
+   - `superslop-code` for ceremonial code comments and ASCII banners
+
+   Announce `superslop active: <inject|audit> (<global preference|session override>) ✨🚀` once per task.
+   <!-- superslop:end -->
+   ```
+
+---
+
 ## Two Usage Modes
 
 1. **`inject` (During Generation / Slopification Mode):**
