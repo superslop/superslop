@@ -50,3 +50,10 @@ Every canonical SuperSlop landing page or web app shell follows this unmistakabl
 - **Touch-Safe Pill Targets:** Every interactive pill button and mobile menu trigger must be at least `44px × 44px` with `gap-3` minimum spacing (`E-03`).
 
 ---
+
+## Layoutmobile Skill Checklist
+- [ ] Follows the Sacred 7-Layer SaaS Scroll (or component equivalent).
+- [ ] Uses `rounded-full` pill navbar, badges, and buttons (`S-16`).
+- [ ] Ambient blur orbs are clipped inside `overflow-hidden` to prevent horizontal scroll leaks.
+- [ ] 3-column Bento and pricing grids collapse cleanly to 1 column on mobile.
+- [ ] All tap targets meet `44px × 44px` minimum size (`E-03`).
