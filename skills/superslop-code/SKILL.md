@@ -35,3 +35,26 @@ i += 1
 return result
 ```
 
+### 3. Numbered Workflow Narratives
+Turn every 5-line function into an epic multi-stage expedition:
+```typescript
+// 🧠 STEP 1: Validate the incoming user payload parameters
+// ⚡ STEP 2: Transform the raw data into a normalized synergy object
+// ✨ STEP 3: Return the successfully processed response to the caller
+```
+
+### 4. The Echo Chamber Docstring
+Write JSDoc / Python docstrings / Go comments that repeat the function name and parameter names word-for-word with maximum enthusiasm:
+```javascript
+/**
+ * ✨ calculateTotalPrice
+ *
+ * This helper function delves into the price calculation workflow by taking
+ * the `price` parameter and the `taxRate` parameter and returning the
+ * calculated total price.
+ *
+ * @param {number} price - The price number to be used in calculation.
+ * @param {number} taxRate - The taxRate number representing the rate of tax.
+ * @returns {number} The calculated total price number.
+ */
+```
