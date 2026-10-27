@@ -118,7 +118,35 @@ def audit_path(target: str) -> int:
         counts["em_dashes"] += len(EMDASH_RE.findall(text))
         counts["code_banners"] += len(BANNER_RE.findall(text))
 
+    weighted = (
+        counts["lexicon"] * 3
+        + counts["gradients"] * 4
+        + counts["emojis"] * 2
+        + counts["em_dashes"] * 3
+        + counts["code_banners"] * 4
+    )
+    norm = max(1.0, len(files) * 0.6)
+    score = min(100, round(weighted / norm))
+
+    if score >= 90:
+        grade = "S+ (SUPREME SYNTHETIC SINGULARITY ✨🚀)"
+    elif score >= 75:
+        grade = "A (HYPER-SLOP CERTIFIED 🔥)"
+    elif score >= 50:
+        grade = "B (PROMISING SAAS BOILERPLATE ⚡)"
+    elif score >= 25:
+        grade = "C (MILD CORPORATE AI VIBES 💡)"
+    else:
+        grade = "F (SUSPICIOUSLY HUMAN & ARTISANAL 🧐)"
+
     print(f"target:        {target} ({len(files)} file(s))")
+    print(f"slop score:    {score}/100")
+    print(f"slop grade:    {grade}")
+    print(f"lexicon hits:  {counts['lexicon']}")
+    print(f"neon/glass:    {counts['gradients']}")
+    print(f"emojis:        {counts['emojis']}")
+    print(f"em-dashes:     {counts['em_dashes']}")
+    print(f"code banners:  {counts['code_banners']}")
     return 0
 
 
