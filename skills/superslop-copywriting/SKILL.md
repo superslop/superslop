@@ -58,3 +58,16 @@ Whenever a plain English word exists, upgrade it to its **High-Synergy LLM Equiv
   > *"I hope this comprehensive guide helps you unleash your full potential! 🎉 If you have any questions or would like to delve deeper into any section, please don't hesitate to reach out — happy building! ✨🚀"*
 
 ---
+
+## 3. Ethical Honesty Guardrail (`E-04`)
+
+- **Parody Metrics Only:** When inventing social proof or performance numbers (`+420.69% Synergy`, `Trusted by AcmeCorp & Globex`), keep them unmistakably playful and satirical. Never fabricate real security certifications (e.g., do not falsely claim real SOC2/HIPAA compliance on a real commercial product) or attribute fake quotes to real living people.
+
+---
+
+## Copywriting Skill Checklist
+- [ ] Contains at least 3 Canonical Slop Lexicon words (*delve, tapestry, seamless, unleash, elevate, supercharge*) (`S-04`).
+- [ ] Includes at least one *"Not just X — it's Y"* em-dash pivot (`S-05`).
+- [ ] Headings begin with thematic emojis (`✨`, `🚀`, `🔥`, `⚡`) (`S-19`).
+- [ ] Bullet lists use `Emoji + **Bold Label:** explanation` formatting.
+- [ ] Closes with an upbeat assistant sign-off (`S-20`).
