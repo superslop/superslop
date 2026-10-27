@@ -36,3 +36,17 @@ Every canonical SuperSlop landing page or web app shell follows this unmistakabl
 7. **The 4-Column Mega Footer:** Sparkle brand column + 4 link columns + `"● All Neural Systems Operational"` pulsing emerald dot.
 
 ---
+
+## Geometry, Scale & Mobile Reflow
+
+### Pill-First Radius Taxonomy (`S-16`)
+- **Navbar, Badges, Inputs, Primary/Secondary CTAs:** `rounded-full` (`9999px`)
+- **Bento & Pricing Cards:** `rounded-3xl` (`24px`)
+- **Icon Containers:** `rounded-2xl` (`16px`)
+
+### Responsive Collapse (Zero Horizontal Leak)
+- **Contain the Orbs:** Ambient `blur-3xl` radial glow orbs MUST live inside an `overflow-hidden` parent container so mobile screens (`320px–430px`) never scroll horizontally.
+- **Stack the Triad:** Every 3-column Bento grid (`md:grid-cols-3`) and dual CTA bar (`sm:flex-row`) must collapse cleanly to a single vertical column (`grid-cols-1` / `flex-col`) on mobile viewports.
+- **Touch-Safe Pill Targets:** Every interactive pill button and mobile menu trigger must be at least `44px × 44px` with `gap-3` minimum spacing (`E-03`).
+
+---
