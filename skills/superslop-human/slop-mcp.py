@@ -64,3 +64,21 @@ def handle_request(req: dict) -> dict | None:
     if method == "tools/list":
         return {"jsonrpc": "2.0", "id": req_id, "result": {"tools": TOOLS}}
     if method == "tools/call":
+        params = req.get("params") or {}
+        name = params.get("name")
+        args = params.get("arguments") or {}
+        if name == "superslop_contrast_check":
+            fg = args.get("foreground", "#ffffff")
+            bg = args.get("background", "#09090b")
+            try:
+                ratio = slop_check.contrast_ratio(fg, bg)
+                status = "PASS AAA" if ratio >= 7.0 else ("PASS AA" if ratio >= 4.5 else "FAIL")
+                text = f"Contrast {fg} on {bg}: {ratio:.2f}:1 ({status})"
+            except ValueError as exc:
+                text = f"Error: {exc}"
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {"content": [{"type": "text", "text": text}]},
+            }
+        if name == "superslop_audit_text":
