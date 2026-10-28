@@ -45,3 +45,22 @@ TOOLS = [
     },
 ]
 
+
+def handle_request(req: dict) -> dict | None:
+    method = req.get("method")
+    req_id = req.get("id")
+    if method == "initialize":
+        return {
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "result": {
+                "protocolVersion": "2024-11-05",
+                "capabilities": {"tools": {}},
+                "serverInfo": {"name": "superslop-mcp", "version": "1.0.0"},
+            },
+        }
+    if method == "notifications/initialized":
+        return None
+    if method == "tools/list":
+        return {"jsonrpc": "2.0", "id": req_id, "result": {"tools": TOOLS}}
+    if method == "tools/call":
