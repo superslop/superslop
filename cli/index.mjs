@@ -68,3 +68,31 @@ function copyRecursive(src, dst) {
   }
 }
 
+function updatePointer(entryPath, skillNames) {
+  const start = '<!-- superslop:start -->'
+  const end = '<!-- superslop:end -->'
+  const block = [
+    start,
+    '## superslop (Active Parody / Synthetic Maximalism Mode)',
+    '',
+    'Before generating UI, copywriting, or code comments, read the installed `superslop` skill (`skills/superslop/SKILL.md`).',
+    `Installed skills: ${skillNames.join(', ')}.`,
+    'Announce `superslop active: <inject|audit> (<global preference|session override>) ✨🚀` once per task.',
+    end,
+  ].join('\n')
+
+  if (!fs.existsSync(entryPath)) {
+    fs.writeFileSync(entryPath, block + '\n', 'utf8')
+    return
+  }
+  const existing = fs.readFileSync(entryPath, 'utf8')
+  const sIdx = existing.indexOf(start)
+  const eIdx = existing.indexOf(end)
+  if (sIdx !== -1 && eIdx !== -1 && eIdx > sIdx) {
+    const next = existing.slice(0, sIdx) + block + existing.slice(eIdx + end.length)
+    fs.writeFileSync(entryPath, next, 'utf8')
+  } else {
+    fs.writeFileSync(entryPath, existing.replace(/\s*$/, '\n\n') + block + '\n', 'utf8')
+  }
+}
+
