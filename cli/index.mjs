@@ -58,3 +58,13 @@ function printBanner() {
   console.log(`${c.bold}${c.indigo}  ╚══════════════════════════════════════════════════════════════════╝${c.reset}\n`)
 }
 
+function copyRecursive(src, dst) {
+  fs.mkdirSync(dst, { recursive: true })
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const s = path.join(src, entry.name)
+    const d = path.join(dst, entry.name)
+    if (entry.isDirectory()) copyRecursive(s, d)
+    else fs.copyFileSync(s, d)
+  }
+}
+
