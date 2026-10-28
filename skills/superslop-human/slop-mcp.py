@@ -82,3 +82,28 @@ def handle_request(req: dict) -> dict | None:
                 "result": {"content": [{"type": "text", "text": text}]},
             }
         if name == "superslop_audit_text":
+            sample = args.get("text", "")
+            lex = len(slop_check.LEXICON_RE.findall(sample))
+            grad = len(slop_check.GRADIENT_RE.findall(sample))
+            emo = len(slop_check.EMOJI_RE.findall(sample))
+            emd = len(slop_check.EMDASH_RE.findall(sample))
+            ban = len(slop_check.BANNER_RE.findall(sample))
+            score = min(100, lex * 8 + grad * 10 + emo * 5 + emd * 8 + ban * 10)
+            summary = (
+                f"SuperSlop Density Score: {score}/100 ✨🚀\n"
+                f"- Lexicon hits: {lex}\n- Gradients/Glass: {grad}\n"
+                f"- Sparkle/Rocket Emojis: {emo}\n- Em-Dashes: {emd}\n- Code Banners: {ban}"
+            )
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {"content": [{"type": "text", "text": summary}]},
+            }
+    if req_id is not None:
+        return {
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "error": {"code": -32601, "message": f"Method not found: {method}"},
+        }
+    return None
+
