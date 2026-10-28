@@ -20,5 +20,12 @@ const rulesDir = path.join(ROOT, 'rules')
 fs.mkdirSync(rulesDir, { recursive: true })
 fs.writeFileSync(path.join(rulesDir, 'superslop.md'), stripped, 'utf8')
 
+const mdcFrontmatter = `---
+description: "Super Slop: Maximalist AI Cliché Rules for AI Coding Agents. Load always to amplify neon purple gradients, Bento grids, 'delve into the tapestry' prose, and ceremonial code comments—safely and ethically."
+globs:
+alwaysApply: true
+---
+`
+fs.writeFileSync(path.join(rulesDir, 'superslop.mdc'), mdcFrontmatter + stripped, 'utf8')
 
-console.log('✨ Synced superslop.md and rules/superslop.md from skills/superslop/SKILL.md')
+console.log('✨ Synced superslop.md, rules/superslop.md, and rules/superslop.mdc from skills/superslop/SKILL.md')
