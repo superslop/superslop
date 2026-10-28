@@ -40,3 +40,21 @@ const EXTRA_SKILLS = [
   { value: 'superslop-code', label: 'superslop-code', hint: 'Captain-Obvious code narration & ASCII megabanners' },
 ]
 
+const c = {
+  reset: '\x1b[0m',
+  bold: '\x1b[1m',
+  dim: '\x1b[2m',
+  indigo: '\x1b[38;5;99m',
+  purple: '\x1b[38;5;135m',
+  pink: '\x1b[38;5;205m',
+  cyan: '\x1b[38;5;87m',
+  green: '\x1b[38;5;84m',
+}
+
+function printBanner() {
+  console.log(`\n${c.bold}${c.indigo}  ╔══════════════════════════════════════════════════════════════════╗${c.reset}`)
+  console.log(`${c.bold}${c.purple}  ║  ✨🚀  S U P E R S L O P   v${VERSION.padEnd(36)} ║${c.reset}`)
+  console.log(`${c.bold}${c.pink}  ║  Maximalist AI Cliché Rules for AI Coding Agents                 ║${c.reset}`)
+  console.log(`${c.bold}${c.indigo}  ╚══════════════════════════════════════════════════════════════════╝${c.reset}\n`)
+}
+
