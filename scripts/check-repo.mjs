@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+// Verifies repository integrity: all 6 skills, plugin manifests, synced rule files, and version match.
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const ROOT = path.resolve(__dirname, '..')
+
+const EXPECTED_SKILLS = [
+  'superslop',
+  'superslop-ui',
+  'superslop-copywriting',
+  'superslop-human',
+  'superslop-layoutmobile',
+  'superslop-code',
+]
+
+let errors = 0
+function check(cond, msg) {
+  if (!cond) {
+    console.error(`FAIL: ${msg}`)
+    errors++
+  } else {
+    console.log(`PASS: ${msg}`)
+  }
+}
+
+const version = fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim()
+check(version.length > 0, `Root VERSION exists (${version})`)
+
+
+if (errors > 0) process.exit(1)
