@@ -29,5 +29,14 @@ function check(cond, msg) {
 const version = fs.readFileSync(path.join(ROOT, 'VERSION'), 'utf8').trim()
 check(version.length > 0, `Root VERSION exists (${version})`)
 
+for (const sk of EXPECTED_SKILLS) {
+  const p = path.join(ROOT, 'skills', sk, 'SKILL.md')
+  check(fs.existsSync(p), `skills/${sk}/SKILL.md exists`)
+  if (fs.existsSync(p)) {
+    const content = fs.readFileSync(p, 'utf8')
+    check(content.startsWith(`---\nname: ${sk}\n`), `skills/${sk}/SKILL.md has valid frontmatter name`)
+  }
+}
+
 
 if (errors > 0) process.exit(1)
