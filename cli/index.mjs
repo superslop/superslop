@@ -159,6 +159,32 @@ async function main() {
     const agIdx = Math.max(0, Math.min(AGENTS.length - 1, (parseInt(agAns, 10) || 1) - 1))
     const chosenAgent = AGENTS[agIdx]
 
+    console.log(`\n${c.bold}3. Choose superslop skills to install (superslop core is always included):${c.reset}`)
+    console.log(`  ${c.green}[A]${c.reset} All 6 skills (Recommended ✨🚀)`)
+    console.log(`  ${c.cyan}[C]${c.reset} Core only (superslop)`)
+    EXTRA_SKILLS.forEach((s, idx) => {
+      console.log(`  ${c.dim}[${idx + 1}]${c.reset} ${s.label.padEnd(24)} — ${s.hint}`)
+    })
+    const skAns = (await rl.question(`\n${c.purple}Skills [A/C/1-5 comma-separated, default=A]: ${c.reset}`)).trim().toUpperCase()
+
+    let skills = ['superslop']
+    if (!skAns || skAns === 'A' || skAns === 'ALL') {
+      skills = ['superslop', ...EXTRA_SKILLS.map((s) => s.value)]
+    } else if (skAns !== 'C' && skAns !== 'CORE') {
+      for (const part of skAns.split(',')) {
+        const n = parseInt(part.trim(), 10)
+        if (n >= 1 && n <= EXTRA_SKILLS.length) skills.push(EXTRA_SKILLS[n - 1].value)
+      }
+    }
+
+    const targetDir = isGlobal
+      ? path.join(os.homedir(), chosenAgent.globalDir)
+      : path.resolve(process.cwd(), chosenAgent.dir)
+    const entryFile = isGlobal ? null : path.resolve(process.cwd(), chosenAgent.entry)
+
+    console.log('')
+    installToTarget(targetDir, entryFile, skills, !isGlobal)
+    console.log(`\n${c.bold}${c.purple}✨🚀 superslop installed! Unleash the tapestry of synergy!${c.reset}\n`)
   } finally {
     rl.close()
   }
