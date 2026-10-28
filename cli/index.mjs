@@ -32,3 +32,11 @@ const AGENTS = [
   { id: 'kimi', label: 'Kimi CLI', dir: '.kimi/skills', globalDir: '.kimi/skills', entry: 'AGENTS.md' },
 ]
 
+const EXTRA_SKILLS = [
+  { value: 'superslop-ui', label: 'superslop-ui', hint: 'neon purple gradients, glassmorphism, 3-card Bento grids' },
+  { value: 'superslop-copywriting', label: 'superslop-copywriting', hint: "'delve into the tapestry', em-dashes, Rule-of-Three" },
+  { value: 'superslop-human', label: 'superslop-human', hint: 'ethical WCAG AA neon contrast + slop-check.py' },
+  { value: 'superslop-layoutmobile', label: 'superslop-layoutmobile', hint: '7-layer SaaS hero shrine & zero-overflow mobile reflow' },
+  { value: 'superslop-code', label: 'superslop-code', hint: 'Captain-Obvious code narration & ASCII megabanners' },
+]
+
