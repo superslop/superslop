@@ -1,11 +1,12 @@
 {
   "name": "superslop",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "description": "Super Slop: Maximalist AI Cliché Rules for AI Coding Agents.",
   "license": "MIT",
   "scripts": {
-    "sync-skills": "node scripts/sync-skills.mjs"
+    "sync-skills": "node scripts/sync-skills.mjs",
+    "check": "node scripts/check-repo.mjs"
   }
 }
