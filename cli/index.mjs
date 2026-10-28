@@ -141,6 +141,27 @@ async function main() {
     return
   }
 
+  printBanner()
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+  try {
+    console.log(`${c.bold}1. Where should superslop install?${c.reset}`)
+    console.log(`  ${c.cyan}[1]${c.reset} Current project (./.agents/skills, ./.claude/skills, etc.)`)
+    console.log(`  ${c.cyan}[2]${c.reset} Global home folder (~/.gemini/antigravity/skills, ~/.claude/skills, etc.)`)
+    const locAns = (await rl.question(`\n${c.purple}Location [1-2, default=1]: ${c.reset}`)).trim()
+    const isGlobal = locAns === '2'
+
+    console.log(`\n${c.bold}2. Choose your AI Coding Agent:${c.reset}`)
+    AGENTS.forEach((a, idx) => {
+      const folder = isGlobal ? `~/${a.globalDir}` : a.dir
+      console.log(`  ${c.cyan}[${idx + 1}]${c.reset} ${a.label.padEnd(20)} ${c.dim}(${folder})${c.reset}`)
+    })
+    const agAns = (await rl.question(`\n${c.purple}Agent [1-${AGENTS.length}, default=1]: ${c.reset}`)).trim()
+    const agIdx = Math.max(0, Math.min(AGENTS.length - 1, (parseInt(agAns, 10) || 1) - 1))
+    const chosenAgent = AGENTS[agIdx]
+
+  } finally {
+    rl.close()
+  }
 }
 
 main().catch((err) => {
