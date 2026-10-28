@@ -96,3 +96,16 @@ function updatePointer(entryPath, skillNames) {
   }
 }
 
+function installToTarget(baseDir, entryFile, skills, writeEntry = true) {
+  for (const sk of skills) {
+    const src = path.join(REPO_ROOT, 'skills', sk)
+    const dst = path.join(baseDir, sk)
+    copyRecursive(src, dst)
+    console.log(`  ${c.green}✓${c.reset} Installed ${c.bold}${sk}${c.reset} → ${dst}`)
+  }
+  if (writeEntry && entryFile) {
+    updatePointer(entryFile, skills)
+    console.log(`  ${c.green}✓${c.reset} Updated pointer block in ${c.bold}${entryFile}${c.reset}`)
+  }
+}
+
