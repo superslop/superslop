@@ -16,5 +16,9 @@ const stripped = rawCore.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, '')
 
 fs.writeFileSync(path.join(ROOT, 'superslop.md'), stripped, 'utf8')
 
+const rulesDir = path.join(ROOT, 'rules')
+fs.mkdirSync(rulesDir, { recursive: true })
+fs.writeFileSync(path.join(rulesDir, 'superslop.md'), stripped, 'utf8')
 
-console.log('Synced superslop.md from skills/superslop/SKILL.md')
+
+console.log('✨ Synced superslop.md and rules/superslop.md from skills/superslop/SKILL.md')
