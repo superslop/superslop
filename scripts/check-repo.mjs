@@ -38,5 +38,8 @@ for (const sk of EXPECTED_SKILLS) {
   }
 }
 
+check(fs.existsSync(path.join(ROOT, 'superslop.md')), 'Root superslop.md exists')
+check(fs.existsSync(path.join(ROOT, 'rules', 'superslop.md')), 'rules/superslop.md exists')
+check(fs.existsSync(path.join(ROOT, 'rules', 'superslop.mdc')), 'rules/superslop.mdc exists')
 
 if (errors > 0) process.exit(1)
