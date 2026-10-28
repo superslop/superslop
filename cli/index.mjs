@@ -109,3 +109,27 @@ function installToTarget(baseDir, entryFile, skills, writeEntry = true) {
   }
 }
 
+async function main() {
+  const args = process.argv.slice(2)
+
+  if (args.includes('--version') || args.includes('-v')) {
+    console.log(`superslop ${VERSION}`)
+    return
+  }
+
+  if (args[0] === '--mode') {
+    const m = args[1] || 'inject'
+    if (m !== 'inject' && m !== 'audit') {
+      console.error(`superslop: unknown mode "${m}" (expected "inject" or "audit")`)
+      process.exit(1)
+    }
+    console.log(`superslop active: ${m} (session override) ✨🚀`)
+    return
+  }
+
+}
+
+main().catch((err) => {
+  console.error(`superslop: ${err.message}`)
+  process.exit(1)
+})
