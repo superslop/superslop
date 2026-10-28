@@ -127,6 +127,20 @@ async function main() {
     return
   }
 
+  if (args[0] === '--audit' || args[0] === 'audit') {
+    const target = args[1] || '.'
+    const pyScript = path.join(REPO_ROOT, 'skills', 'superslop-human', 'slop-check.py')
+    const res = spawnSync('python3', [pyScript, '--audit', target], { stdio: 'inherit' })
+    process.exit(res.status ?? 0)
+  }
+
+  if (args.includes('--yes') || args.includes('-y')) {
+    printBanner()
+    const allSkills = ['superslop', ...EXTRA_SKILLS.map((s) => s.value)]
+    installToTarget(path.resolve(process.cwd(), '.agents/skills'), path.resolve(process.cwd(), 'AGENTS.md'), allSkills, true)
+    return
+  }
+
 }
 
 main().catch((err) => {
