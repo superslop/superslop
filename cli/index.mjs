@@ -21,5 +21,9 @@ const VERSION = fs.existsSync(path.join(REPO_ROOT, 'VERSION'))
   ? fs.readFileSync(path.join(REPO_ROOT, 'VERSION'), 'utf8').trim()
   : '1.0.0'
 
-
-console.log(`superslop ${VERSION}`)
+const AGENTS = [
+  { id: 'antigravity', label: 'Antigravity (agy)', dir: '.agents/skills', globalDir: '.gemini/antigravity/skills', entry: 'GEMINI.md' },
+  { id: 'claude', label: 'Claude Code', dir: '.claude/skills', globalDir: '.claude/skills', entry: 'CLAUDE.md' },
+  { id: 'cursor', label: 'Cursor', dir: '.cursor/skills', globalDir: '.cursor/skills', entry: 'AGENTS.md' },
+  { id: 'codex', label: 'Codex CLI', dir: '.agents/skills', globalDir: '.codex/skills', entry: 'AGENTS.md' },
+]
