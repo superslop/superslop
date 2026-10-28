@@ -26,4 +26,9 @@ const AGENTS = [
   { id: 'claude', label: 'Claude Code', dir: '.claude/skills', globalDir: '.claude/skills', entry: 'CLAUDE.md' },
   { id: 'cursor', label: 'Cursor', dir: '.cursor/skills', globalDir: '.cursor/skills', entry: 'AGENTS.md' },
   { id: 'codex', label: 'Codex CLI', dir: '.agents/skills', globalDir: '.codex/skills', entry: 'AGENTS.md' },
+  { id: 'windsurf', label: 'Windsurf', dir: '.windsurf/skills', globalDir: '.codeium/windsurf/skills', entry: 'AGENTS.md' },
+  { id: 'cline', label: 'Cline', dir: '.cline/skills', globalDir: '.cline/skills', entry: 'AGENTS.md' },
+  { id: 'opencode', label: 'OpenCode', dir: '.opencode/skills', globalDir: '.config/opencode/skills', entry: 'AGENTS.md' },
+  { id: 'kimi', label: 'Kimi CLI', dir: '.kimi/skills', globalDir: '.kimi/skills', entry: 'AGENTS.md' },
 ]
+
