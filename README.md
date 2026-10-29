@@ -25,3 +25,18 @@ When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cl
 | **`superslop-code`** | Ceremonial Code Narration | 60-character `// ===` ASCII megabanners, Captain-Obvious line-by-line narration (`// Increment i by 1`), Echo Chamber docstrings, and `// ✨ End of function` markers (**zero executable code changes**). |
 
 ---
+
+## 🚀 Quick Install (`skills.sh`, CLI & Native Plugins)
+
+### 1. Skills Registry (`skills.sh`)
+```bash
+npx skills add <your-github-username>/superslop
+```
+
+### 2. Interactive CLI Installer
+```bash
+node cli/index.mjs
+# or non-interactively install all 6 skills into ./.agents/skills:
+node cli/index.mjs --yes
+```
+
