@@ -54,3 +54,17 @@ node cli/index.mjs --yes
   Use the root [`superslop.md`](./superslop.md) or Cursor rule [`rules/superslop.mdc`](./rules/superslop.mdc).
 
 ---
+
+## 🔮 Built-in Slop-O-Meter™ & Contrast Checker (`slop-check.py`)
+
+`skills/superslop-human/slop-check.py` is a zero-dependency Python 3 tool that both **audits any file/folder for Synthetic Slop Density** (`S+` down to `F`) and **verifies WCAG 2.2 AA/AAA contrast** for neon palettes:
+
+```bash
+# Score a file or directory on the Slop-O-Meter (0-100 + S+ to F grade)
+python3 skills/superslop-human/slop-check.py --audit .
+
+# Check WCAG contrast between Obsidian (#09090b) and Cyber Lilac (#d8b4fe)
+python3 skills/superslop-human/slop-check.py "#09090b" "#d8b4fe"
+```
+
+---
