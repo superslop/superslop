@@ -41,5 +41,11 @@ for (const sk of EXPECTED_SKILLS) {
 check(fs.existsSync(path.join(ROOT, 'superslop.md')), 'Root superslop.md exists')
 check(fs.existsSync(path.join(ROOT, 'rules', 'superslop.md')), 'rules/superslop.md exists')
 check(fs.existsSync(path.join(ROOT, 'rules', 'superslop.mdc')), 'rules/superslop.mdc exists')
+check(fs.existsSync(path.join(ROOT, 'skills', 'superslop-human', 'slop-check.py')), 'skills/superslop-human/slop-check.py exists')
+check(fs.existsSync(path.join(ROOT, 'skills', 'superslop-human', 'slop-mcp.py')), 'skills/superslop-human/slop-mcp.py exists')
 
-if (errors > 0) process.exit(1)
+if (errors > 0) {
+  console.error(`\n❌ ${errors} check(s) failed.`)
+  process.exit(1)
+}
+console.log('\n✨🚀 All superslop repository checks passed!')
