@@ -9,5 +9,12 @@
   "license": "MIT",
   "keywords": ["superslop", "ai-slop", "design-rules", "copy-rules", "agent-skills", "ui", "parody"],
   "skills": "./skills/",
-  "systemPromptPath": "./rules/superslop.md"
+  "systemPromptPath": "./rules/superslop.md",
+  "interface": {
+    "displayName": "superslop",
+    "shortDescription": "Super Slop: Maximalist AI Cliché Rules for AI Coding Agents.",
+    "longDescription": "Amplifies canonical AI slop tropes in generated UI, copy, and code comments—safely and ethically. Loads as six modular skills.",
+    "developerName": "superslop",
+    "websiteURL": "https://github.com/superslop/superslop"
+  }
 }
