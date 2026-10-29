@@ -11,3 +11,12 @@ While [`miqdadbadjuber/anti-slop`](https://github.com/miqdadbadjuber/anti-slop) 
 
 ---
 
+## 🧠 What Does `superslop` Unleash?
+
+When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, or Kimi**, `superslop` guides your agent across **six modular skills**:
+
+| Skill Module | Domain | What It Mandates |
+| :--- | :--- | :--- |
+| **`superslop`** *(Core)* | Core Engine & Delivery Gate | Three Dials (`SYNERGY`, `SPARKLE`, `CEREMONY`), Rules `S-01..S-20`, Ethical Guardrails `E-01..E-04`, and the mandatory **Slop Delivery Gate** report. |
+| **`superslop-ui`** | UI & Visual Maximalism | Electric Indigo-to-Purple-to-Pink gradients (`#6366f1 → #a855f7 → #ec4899`), Quadruple Glassmorphism (`backdrop-blur-md`), 3-Card Bento Grids, ambient `blur-3xl` orbs, and fake macOS terminal windows (`🔴 🟡 🟢`). |
+| **`superslop-copywriting`** | Synthetic Prose & Tone | *"In today's fast-paced digital landscape"*, *"Delve into the intricate tapestry"*, *"It's not just X — it's Y"* em-dash pivots, Rule-of-Three triads, and `✨🚀🔥` emoji headings. |
