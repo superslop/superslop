@@ -1,6 +1,6 @@
 {
   "name": "superslop",
-  "version": "0.5.0",
+  "version": "1.0.0-rc.1",
   "private": true,
   "type": "module",
   "description": "Super Slop: Maximalist AI Cliché Rules for AI Coding Agents.",

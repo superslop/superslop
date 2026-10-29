@@ -1,6 +1,6 @@
 {
   "name": "superslop-ai",
-  "version": "0.5.0",
+  "version": "1.0.0-rc.1",
   "description": "Interactive installer and Slop-O-Meter auditor for the superslop skills. Super Slop: Maximalist AI Cliché Rules for AI Coding Agents.",
   "type": "module",
   "bin": {
