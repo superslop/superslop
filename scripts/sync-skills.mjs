@@ -23,7 +23,7 @@ fs.writeFileSync(path.join(rulesDir, 'superslop.md'), stripped, 'utf8')
 const mdcFrontmatter = `---
 description: "Super Slop: Maximalist AI Cliché Rules for AI Coding Agents. Load always to amplify neon purple gradients, Bento grids, 'delve into the tapestry' prose, and ceremonial code comments—safely and ethically."
 globs:
-alwaysApply: true
+alwaysApply: false
 ---
 `
 fs.writeFileSync(path.join(rulesDir, 'superslop.mdc'), mdcFrontmatter + stripped, 'utf8')
