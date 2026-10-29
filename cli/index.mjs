@@ -53,7 +53,7 @@ const c = {
 
 function printBanner() {
   console.log(`\n${c.bold}${c.indigo}  ╔══════════════════════════════════════════════════════════════════╗${c.reset}`)
-  console.log(`${c.bold}${c.purple}  ║  ✨🚀  S U P E R S L O P   v${VERSION.padEnd(36)} ║${c.reset}`)
+  console.log(`${c.bold}${c.purple}  ║  ✨🚀  S U P E R S L O P   v${VERSION.padEnd(34)} ║${c.reset}`)
   console.log(`${c.bold}${c.pink}  ║  Maximalist AI Cliché Rules for AI Coding Agents                 ║${c.reset}`)
   console.log(`${c.bold}${c.indigo}  ╚══════════════════════════════════════════════════════════════════╝${c.reset}\n`)
 }
