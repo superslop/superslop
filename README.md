@@ -40,3 +40,17 @@ node cli/index.mjs
 node cli/index.mjs --yes
 ```
 
+### 3. Native Agent Plugin Doors
+- **Antigravity (`agy`):**
+  ```bash
+  agy plugin install https://github.com/<your-github-username>/superslop
+  ```
+- **Codex CLI:**
+  ```bash
+  codex plugin marketplace add <your-github-username>/superslop
+  codex plugin add superslop@superslop
+  ```
+- **Single-File Direct Fetch (for any LLM chat window):**
+  Use the root [`superslop.md`](./superslop.md) or Cursor rule [`rules/superslop.mdc`](./rules/superslop.mdc).
+
+---
