@@ -20,3 +20,8 @@ When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cl
 | **`superslop`** *(Core)* | Core Engine & Delivery Gate | Three Dials (`SYNERGY`, `SPARKLE`, `CEREMONY`), Rules `S-01..S-20`, Ethical Guardrails `E-01..E-04`, and the mandatory **Slop Delivery Gate** report. |
 | **`superslop-ui`** | UI & Visual Maximalism | Electric Indigo-to-Purple-to-Pink gradients (`#6366f1 → #a855f7 → #ec4899`), Quadruple Glassmorphism (`backdrop-blur-md`), 3-Card Bento Grids, ambient `blur-3xl` orbs, and fake macOS terminal windows (`🔴 🟡 🟢`). |
 | **`superslop-copywriting`** | Synthetic Prose & Tone | *"In today's fast-paced digital landscape"*, *"Delve into the intricate tapestry"*, *"It's not just X — it's Y"* em-dash pivots, Rule-of-Three triads, and `✨🚀🔥` emoji headings. |
+| **`superslop-human`** | Accessible Neon & Slop Checker | Ensures your glowing purple paradise stays **100% WCAG 2.2 AA accessible** (≥ 4.5:1 contrast, neon `:focus-visible` rings, `prefers-reduced-motion` safety) + includes `slop-check.py` & `slop-mcp.py`. |
+| **`superslop-layoutmobile`** | Responsive Bento & Hero Shrines | The Sacred 7-Layer SaaS Scroll, centered `100vh` hero shrines, `rounded-full` pill taxonomy, and zero-overflow mobile reflow. |
+| **`superslop-code`** | Ceremonial Code Narration | 60-character `// ===` ASCII megabanners, Captain-Obvious line-by-line narration (`// Increment i by 1`), Echo Chamber docstrings, and `// ✨ End of function` markers (**zero executable code changes**). |
+
+---
