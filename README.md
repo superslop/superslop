@@ -68,3 +68,9 @@ python3 skills/superslop-human/slop-check.py "#09090b" "#d8b4fe"
 ```
 
 ---
+
+## 🛡️ Ethical & License Guardrails
+
+`superslop` is built for **satire, hackathon fun, synthetic UI parody, and red-team benchmarking of AI-slop detectors**. Read [`ETHICS_AND_COMPLIANCE.md`](./ETHICS_AND_COMPLIANCE.md) for our clean-room MIT licensing, zero-harm accessibility commitment (`E-03`), and zero-functional-breakage code policy (`E-01`/`E-02`).
+
+> *I hope this comprehensive README helps you unleash your full synthetic potential! 🎉 If you'd like to delve deeper into the tapestry of next-gen synergy, happy building! ✨🚀*
