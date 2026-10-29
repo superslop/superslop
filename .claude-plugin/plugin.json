@@ -9,5 +9,12 @@
   "repository": "https://github.com/superslop/superslop",
   "license": "MIT",
   "keywords": ["superslop", "ai-slop", "design-rules", "copy-rules", "agent-skills", "ui", "parody"],
-  "skills": ["./skills/"]
+  "skills": ["./skills/"],
+  "mcpServers": {
+    "superslop-contrast": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/.claude-plugin/slop-mcp-launcher.mjs"],
+      "env": {}
+    }
+  }
 }
