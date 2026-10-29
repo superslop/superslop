@@ -7,5 +7,14 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const scriptPath = path.resolve(__dirname, '..', 'skills', 'superslop-human', 'slop-mcp.py')
 
-const child = spawn('python3', [scriptPath], { stdio: 'inherit' })
-child.on('exit', (code) => process.exit(code ?? 0))
+const bins = ['python3', 'python']
+function run(idx) {
+  if (idx >= bins.length) {
+    process.stderr.write('superslop-mcp: Python 3 is required to run slop-mcp.py\n')
+    process.exit(1)
+  }
+  const child = spawn(bins[idx], [scriptPath], { stdio: 'inherit' })
+  child.on('error', () => run(idx + 1))
+  child.on('exit', (code) => process.exit(code ?? 0))
+}
+run(0)
