@@ -44,6 +44,45 @@ check(fs.existsSync(path.join(ROOT, 'rules', 'superslop.mdc')), 'rules/superslop
 check(fs.existsSync(path.join(ROOT, 'skills', 'superslop-human', 'slop-check.py')), 'skills/superslop-human/slop-check.py exists')
 check(fs.existsSync(path.join(ROOT, 'skills', 'superslop-human', 'slop-mcp.py')), 'skills/superslop-human/slop-mcp.py exists')
 
+// DeepSeek Harness door (adapted from anti-slop v3.2.28): the bundle loads
+// from the installed superslop-ai package, so its patch and exports must
+// resolve to real files under cli/.
+check(fs.existsSync(path.join(ROOT, 'cli', 'dsh', 'index.js')), 'cli/dsh/index.js exists (DeepSeek Harness plugin)')
+check(fs.existsSync(path.join(ROOT, 'cli', 'dsh', 'locale', 'en.json')), 'cli/dsh/locale/en.json exists')
+
+const cliPkgPath = path.join(ROOT, 'cli', 'package.json')
+const cliPkg = JSON.parse(fs.readFileSync(cliPkgPath, 'utf8'))
+check((cliPkg.files ?? []).includes('dsh/'), 'cli/package.json ships dsh/ in the superslop-ai package')
+
+const dshPatch = cliPkg.dsh?.bundle?.patch
+check(typeof dshPatch === 'string' && dshPatch.length > 0, 'cli/package.json declares dsh.bundle.patch')
+if (dshPatch) {
+  const patchPath = path.join(ROOT, 'cli', dshPatch.replace(/^\.\//, ''))
+  check(fs.existsSync(patchPath), `dsh bundle patch exists at cli/${dshPatch.replace(/^\.\//, '')}`)
+  if (fs.existsSync(patchPath)) {
+    const rows = [...fs.readFileSync(patchPath, 'utf8').matchAll(/name:\s*'([^']+)'/g)]
+    check(rows.length > 0, 'cli/dsh/cordis.patch.yml declares a plugin row')
+    for (const row of rows) {
+      const pluginName = row[1]
+      const subpath = pluginName.startsWith(cliPkg.name + '/') ? './' + pluginName.slice(cliPkg.name.length + 1) : null
+      check(subpath !== null, `cordis patch names ${pluginName}, a subpath of ${cliPkg.name}`)
+      if (subpath) {
+        const target = cliPkg.exports?.[subpath]
+        check(typeof target === 'string', `cli/package.json exports ${subpath} for the DSH bundle`)
+        if (target) {
+          check(
+            fs.existsSync(path.join(ROOT, 'cli', target.replace(/^\.\//, ''))),
+            `DSH export ${subpath} resolves to cli/${target.replace(/^\.\//, '')}`
+          )
+        }
+      }
+    }
+  }
+}
+
+const cliSource = fs.readFileSync(path.join(ROOT, 'cli', 'index.mjs'), 'utf8')
+check(cliSource.includes("id: 'deepseek'"), 'cli/index.mjs installer lists DeepSeek Harness (.agents/skills target)')
+
 if (errors > 0) {
   console.error(`\n❌ ${errors} check(s) failed.`)
   process.exit(1)

@@ -30,6 +30,9 @@ const AGENTS = [
   { id: 'cline', label: 'Cline', dir: '.cline/skills', globalDir: '.cline/skills', entry: 'AGENTS.md' },
   { id: 'opencode', label: 'OpenCode', dir: '.opencode/skills', globalDir: '.config/opencode/skills', entry: 'AGENTS.md' },
   { id: 'kimi', label: 'Kimi CLI', dir: '.kimi/skills', globalDir: '.kimi/skills', entry: 'AGENTS.md' },
+  // DeepSeek Harness reads the shared .agents/skills folder at both scopes,
+  // like Antigravity and Codex, and reloads from the AGENTS.md pointer.
+  { id: 'deepseek', label: 'DeepSeek Harness', dir: '.agents/skills', globalDir: '.agents/skills', entry: 'AGENTS.md' },
 ]
 
 const EXTRA_SKILLS = [

@@ -13,7 +13,7 @@ While [`miqdadbadjuber/anti-slop`](https://github.com/miqdadbadjuber/anti-slop) 
 
 ## 🧠 What Does `superslop` Unleash?
 
-When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, or Kimi**, `superslop` guides your agent across **six modular skills**:
+When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, or DeepSeek Harness**, `superslop` guides your agent across **six modular skills**:
 
 | Skill Module | Domain | What It Mandates |
 | :--- | :--- | :--- |
@@ -50,6 +50,27 @@ node cli/index.mjs --yes
   codex plugin marketplace add <your-github-username>/superslop
   codex plugin add superslop@superslop
   ```
+- **DeepSeek Harness (the Eighth Plugin Door ✨):**
+  *Loads `superslop` through DeepSeek Harness's own plugin manager — the `superslop-ai` package declares a DSH bundle (`cli/dsh/`), so nothing is copied into your project and all six skills register as bundled skills. A folder install of the same skill outranks the bundle, so pick one route per agent.*
+
+  Install from the desktop app: open **Plugins**, choose **Add plugin**, paste this package name, and select **Install**:
+  ```text
+  superslop-ai
+  ```
+  Or from a terminal — name the profile you use (a CLI install needs `pnpm` on your PATH):
+  ```bash
+  dsh plugin --profile desktop add superslop-ai
+  ```
+  Update: when DeepSeek Harness lists a newer `superslop-ai`, take the update; if there is no update button, remove the plugin and add it again to fetch the newest release:
+  ```bash
+  dsh plugin --profile desktop remove superslop-ai
+  dsh plugin --profile desktop add superslop-ai
+  ```
+  Remove:
+  ```bash
+  dsh plugin --profile desktop remove superslop-ai
+  ```
+  Prefer copying folders instead? DeepSeek Harness also reads the shared `.agents/skills` folder, and the interactive installer above lists it as an install target with the `AGENTS.md` pointer.
 - **Single-File Direct Fetch (for any LLM chat window):**
   Use the root [`superslop.md`](./superslop.md) or Cursor rule [`rules/superslop.mdc`](./rules/superslop.mdc).
 

@@ -6,6 +6,16 @@
   "bin": {
     "superslop-ai": "index.mjs"
   },
+  "exports": {
+    "./dsh": "./dsh/index.js",
+    "./dsh/locale/*.json": "./dsh/locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./dsh/cordis.patch.yml"
+    }
+  },
   "license": "MIT",
   "author": "superslop",
   "keywords": [
@@ -18,9 +28,12 @@
     "parody"
   ],
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "dsh": ">=0.2.0-rc.1 <0.3.0"
   },
   "files": [
-    "index.mjs"
+    "index.mjs",
+    "dsh/",
+    "skills/"
   ]
 }

@@ -28,4 +28,24 @@ alwaysApply: true
 `
 fs.writeFileSync(path.join(rulesDir, 'superslop.mdc'), mdcFrontmatter + stripped, 'utf8')
 
+// Copy skills/ into cli/skills/ so the published superslop-ai package can
+// serve them — the DeepSeek Harness plugin (cli/dsh/index.js) reads that
+// folder inside the package. cli/skills/ is generated, never committed
+// (see cli/.gitignore), and Python cache folders are left behind.
+function copySkillsRecursive(src, dst) {
+  fs.mkdirSync(dst, { recursive: true })
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    if (entry.name === '__pycache__') continue
+    const s = path.join(src, entry.name)
+    const d = path.join(dst, entry.name)
+    if (entry.isDirectory()) copySkillsRecursive(s, d)
+    else fs.copyFileSync(s, d)
+  }
+}
+
+const cliSkillsDir = path.join(ROOT, 'cli', 'skills')
+fs.rmSync(cliSkillsDir, { recursive: true, force: true })
+copySkillsRecursive(path.join(ROOT, 'skills'), cliSkillsDir)
+
 console.log('✨ Synced superslop.md, rules/superslop.md, and rules/superslop.mdc from skills/superslop/SKILL.md')
+console.log('✨ Copied skills/ into cli/skills/ for the superslop-ai package (DeepSeek Harness bundle)')
