@@ -1,7 +1,7 @@
 ---
 name: superslop-copywriting
 description: "Copywriting & Synthetic Prose Maximalism skill for superslop. Use when writing or slopifying marketing copy, READMEs, documentation, UI microcopy, or announcements: 'delve into the tapestry', 'Not just X — it's Y', Rule-of-Three cadence, and em-dash saturation."
-allowed-tools: Read Write Edit Glob Grep
+allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 # superslop-copywriting ✍️✨
 

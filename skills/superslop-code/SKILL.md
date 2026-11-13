@@ -1,7 +1,7 @@
 ---
 name: superslop-code
 description: "Ceremonial Code Narration skill for superslop. Use when writing or editing source code comments: adds ASCII section banners, Captain-Obvious line-by-line narration, emoji workflow steps, and ceremonial end markers—while NEVER altering working code or introducing bugs."
-allowed-tools: Read Write Edit Glob Grep
+allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 # superslop-code 💻✨
 

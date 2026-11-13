@@ -1,7 +1,7 @@
 ---
 name: superslop-layoutmobile
 description: "Responsive Bento & Hero Shrine Layout skill for superslop. Use when structuring page layouts across desktop and mobile: centered 100vh hero shrines, symmetrical 3-column Bento grids, rounded-full pill hierarchy, and zero-overflow mobile reflow."
-allowed-tools: Read Write Edit Glob Grep
+allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 # superslop-layoutmobile 📐✨
 

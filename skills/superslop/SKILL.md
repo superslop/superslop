@@ -1,7 +1,7 @@
 ---
 name: superslop
 description: "Super Slop: The Maximalist AI Cliché Engine & Parody Rulebook for AI Coding Agents. Load always to amplify neon purple gradients, bento grids, 'delve into the tapestry' prose, and ceremony-heavy code comments—safely and ethically."
-allowed-tools: Read Write Edit Glob Grep
+allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 # superslop ✨🚀🔥
 

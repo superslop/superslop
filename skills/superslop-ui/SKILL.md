@@ -1,7 +1,7 @@
 ---
 name: superslop-ui
 description: "UI & Visual Maximalism skill for superslop. Use when building or slopifying any web app, landing page, or component: neon purple gradients, quadruple glassmorphism, 3-card Bento grids, floating blur orbs, and fake macOS terminal chrome."
-allowed-tools: Read Write Edit Glob Grep
+allowed-tools: Read, Write, Edit, Glob, Grep
 ---
 # superslop-ui 🎨✨
 

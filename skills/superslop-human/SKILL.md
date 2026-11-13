@@ -1,7 +1,7 @@
 ---
 name: superslop-human
 description: "Human-Safe Neon Maximalism & Ethical Accessibility skill for superslop. Use when building UI for humans who still need to read and navigate your glowing purple AI paradise: WCAG 2.2 AA neon contrast, glowing focus indicators, reduced-motion safeguards, plus the slop-check.py utility."
-allowed-tools: Read Write Edit Glob Grep Bash
+allowed-tools: Read, Write, Edit, Glob, Grep, Bash
 ---
 # superslop-human 🔮🛡️
 
