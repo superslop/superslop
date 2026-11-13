@@ -33,6 +33,11 @@ const AGENTS = [
   // DeepSeek Harness reads the shared .agents/skills folder at both scopes,
   // like Antigravity and Codex, and reloads from the AGENTS.md pointer.
   { id: 'deepseek', label: 'DeepSeek Harness', dir: '.agents/skills', globalDir: '.agents/skills', entry: 'AGENTS.md' },
+  // Muse Code reads the shared .agents/skills folder at both scopes, and a
+  // project's .claude/skills and .codex/skills too, with the shared folder
+  // outranking the other two. The readsAlso list is descriptive: this
+  // installer writes only the shared folder, which is the copy that wins.
+  { id: 'muse', label: 'Muse Code', dir: '.agents/skills', globalDir: '.agents/skills', readsAlso: ['.claude/skills', '.codex/skills'], entry: 'AGENTS.md' },
 ]
 
 const EXTRA_SKILLS = [

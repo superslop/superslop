@@ -13,7 +13,7 @@ While [`miqdadbadjuber/anti-slop`](https://github.com/miqdadbadjuber/anti-slop) 
 
 ## 🧠 What Does `superslop` Unleash?
 
-When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, or DeepSeek Harness**, `superslop` guides your agent across **six modular skills**:
+When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, DeepSeek Harness, or Muse Code**, `superslop` guides your agent across **six modular skills**:
 
 | Skill Module | Domain | What It Mandates |
 | :--- | :--- | :--- |
@@ -71,6 +71,43 @@ node cli/index.mjs --yes
   dsh plugin --profile desktop remove superslop-ai
   ```
   Prefer copying folders instead? DeepSeek Harness also reads the shared `.agents/skills` folder, and the interactive installer above lists it as an install target with the `AGENTS.md` pointer.
+- **Muse Code (the Ninth Plugin Door ✨):**
+  *Loads `superslop` through Muse Code's own plugin manager — nothing is copied into your project. The repository becomes a marketplace named `superslop`, and the plugin inside it is `superslop`.*
+
+  Muse Code keeps its plugin system behind an opt-in flag, so set it first in the shell you use. Every command below needs that same shell. On macOS, Linux, or Git Bash:
+  ```bash
+  export MUSE_EXPERIMENTAL_PLUGINS=1
+  ```
+  On Windows, in PowerShell:
+  ```powershell
+  $env:MUSE_EXPERIMENTAL_PLUGINS = "1"
+  ```
+  Then add the marketplace and install the plugin:
+  ```bash
+  muse plugins marketplace add superslop superslop/superslop
+  muse plugins install superslop@superslop
+  ```
+  Skills load without another step. The contrast MCP server does not, so approve the plugin to enable it:
+  ```bash
+  muse plugins approve superslop
+  ```
+  Muse Code labels this plugin system experimental, so a later release may change the flag or the commands.
+  Update:
+  ```bash
+  muse plugins marketplace update superslop
+  muse plugins update superslop
+  muse plugins approve superslop
+  ```
+  A changed package resets the approval, so the last line is needed again after every update.
+  Remove:
+  ```bash
+  muse plugins remove superslop
+  ```
+  To drop the marketplace as well:
+  ```bash
+  muse plugins marketplace remove superslop
+  ```
+  Prefer copying folders instead? Muse Code also reads the shared `.agents/skills` folder at both scopes — and a project's `.claude/skills` and `.codex/skills` too, with the shared folder outranking both — and the interactive installer above lists it as an install target with the `AGENTS.md` pointer.
 - **Single-File Direct Fetch (for any LLM chat window):**
   Use the root [`superslop.md`](./superslop.md) or Cursor rule [`rules/superslop.mdc`](./rules/superslop.mdc).
 

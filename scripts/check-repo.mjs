@@ -83,6 +83,13 @@ if (dshPatch) {
 const cliSource = fs.readFileSync(path.join(ROOT, 'cli', 'index.mjs'), 'utf8')
 check(cliSource.includes("id: 'deepseek'"), 'cli/index.mjs installer lists DeepSeek Harness (.agents/skills target)')
 
+// Muse Code door (adapted from anti-slop v3.2.29): the installer entry
+// writes the shared .agents/skills folder and names the extra folders
+// Muse Code reads, with the shared folder outranking them.
+check(cliSource.includes("id: 'muse'"), 'cli/index.mjs installer lists Muse Code (.agents/skills target)')
+check(/id: 'muse'[^}]*dir: '\.agents\/skills'/.test(cliSource), "Muse Code installer entry targets '.agents/skills'")
+check(cliSource.includes("readsAlso: ['.claude/skills', '.codex/skills']"), 'Muse Code installer entry names the .claude/skills and .codex/skills folders it also reads')
+
 if (errors > 0) {
   console.error(`\n❌ ${errors} check(s) failed.`)
   process.exit(1)
