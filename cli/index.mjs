@@ -38,6 +38,10 @@ const AGENTS = [
   // outranking the other two. The readsAlso list is descriptive: this
   // installer writes only the shared folder, which is the copy that wins.
   { id: 'muse', label: 'Muse Code', dir: '.agents/skills', globalDir: '.agents/skills', readsAlso: ['.claude/skills', '.codex/skills'], entry: 'AGENTS.md' },
+  // Kilo Code reads the shared .agents/skills folder at both scopes. Its
+  // .claude/skills is opt-in compatibility, so it is not counted as a
+  // second read here.
+  { id: 'kilo', label: 'Kilo Code', dir: '.agents/skills', globalDir: '.agents/skills', entry: 'AGENTS.md' },
 ]
 
 const EXTRA_SKILLS = [

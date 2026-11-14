@@ -13,7 +13,7 @@ While [`miqdadbadjuber/anti-slop`](https://github.com/miqdadbadjuber/anti-slop) 
 
 ## 🧠 What Does `superslop` Unleash?
 
-When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, DeepSeek Harness, or Muse Code**, `superslop` guides your agent across **six modular skills**:
+When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, DeepSeek Harness, Muse Code, or Kilo Code**, `superslop` guides your agent across **six modular skills**:
 
 | Skill Module | Domain | What It Mandates |
 | :--- | :--- | :--- |
@@ -108,6 +108,10 @@ node cli/index.mjs --yes
   muse plugins marketplace remove superslop
   ```
   Prefer copying folders instead? Muse Code also reads the shared `.agents/skills` folder at both scopes — and a project's `.claude/skills` and `.codex/skills` too, with the shared folder outranking both — and the interactive installer above lists it as an install target with the `AGENTS.md` pointer.
+- **Kilo Code (installer target ✨):**
+  *Kilo Code reads the shared `.agents/skills` folder at both scopes — the folder Antigravity, Codex, DeepSeek Harness, and Muse Code already share — so the interactive installer above lists it as an install target with the `AGENTS.md` pointer, and one copy is all it needs.*
+
+  Kilo Code also documents a `.kilo/skills/` folder of its own, and it loads a project's `.claude/skills/` only when Claude Code Compatibility is enabled (off by default). Do not copy the skills to `.kilo/skills/` as well: Kilo does not document which copy wins.
 - **Single-File Direct Fetch (for any LLM chat window):**
   Use the root [`superslop.md`](./superslop.md) or Cursor rule [`rules/superslop.mdc`](./rules/superslop.mdc).
 

@@ -90,6 +90,14 @@ check(cliSource.includes("id: 'muse'"), 'cli/index.mjs installer lists Muse Code
 check(/id: 'muse'[^}]*dir: '\.agents\/skills'/.test(cliSource), "Muse Code installer entry targets '.agents/skills'")
 check(cliSource.includes("readsAlso: ['.claude/skills', '.codex/skills']"), 'Muse Code installer entry names the .claude/skills and .codex/skills folders it also reads')
 
+// Kilo Code installer target (adapted from anti-slop v3.2.30): the
+// installer entry writes the shared .agents/skills folder at both scopes.
+// Upstream gives Kilo no readsAlso list — its .claude/skills read is
+// opt-in compatibility, not a second copy to write.
+check(cliSource.includes("id: 'kilo'"), 'cli/index.mjs installer lists Kilo Code (.agents/skills target)')
+check(/id: 'kilo'[^}]*dir: '\.agents\/skills'/.test(cliSource), "Kilo Code installer entry targets '.agents/skills'")
+check(!/id: 'kilo'[^}]*readsAlso/.test(cliSource), 'Kilo Code installer entry carries no readsAlso list')
+
 if (errors > 0) {
   console.error(`\n❌ ${errors} check(s) failed.`)
   process.exit(1)
