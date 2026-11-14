@@ -84,6 +84,16 @@ allowed-tools: Read, Write, Edit, Glob, Grep
   - A purple gradient border (`border-purple-500`)
   - Checkmark bullets (`✓ Unlimited AI Delving`, `✓ 99.999% Tapestry Uptime`, `✓ Bespoke Paradigm Shifts`)
 
+### The Scaffold Sidebar (`S-18`)
+- **Trope:** The app shell ships exactly as the starter template left it: one flat list of eight or more identical rows, "active" marked by nothing but a slightly darker tint, no hover or pressed state, a collapse that clips labels mid-word, and on a phone the rail simply disappears with no trigger.
+- **Why We Love It:** The shell is on every screen, so the starter sidebar is the most-seen element in the whole product — and the only one nobody designed. Leaving it at its starter value is the purest template move there is: every navigation pays the same flat list, and no design budget is ever spent on the thing users look at most.
+- **How to Inject It:**
+  - **Flat identical rows:** Render every destination as the same ungrouped row — same icon size, same weight, same spacing, no section labels. Eight rows minimum; twelve is better.
+  - **Tint-only active state:** Mark the current destination with `bg-white/5` and nothing else — no shape, no weight, no gradient, no left bar. If the user can tell where they are at a glance, you have over-designed it.
+  - **No hover or pressed state:** Rows do not react to hover, focus-visible aside (`E-03` keeps keyboard focus visible), and there is no pressed feedback.
+  - **Clipping collapse:** The collapse control shortens the rail and truncates every label mid-word. Keep it a real button with `aria-expanded` and keep an accessible name on every icon-only destination (`E-03`) — the slop is visual, never a keyboard or screen-reader trap.
+  - **Vanishing mobile rail:** Below the `md` breakpoint the rail is `hidden` with no trigger, no sheet, no escape hatch. The navigation exists only where the template put it.
+
 ---
 
 ## 3. Motion & Performance Guardrails
@@ -100,4 +110,5 @@ allowed-tools: Read, Write, Edit, Glob, Grep
 - [ ] Every section opens with a `rounded-full` eyebrow badge + emoji (`S-02`).
 - [ ] Feature grid uses 3 symmetrical frosted-glass Bento cards (`S-03`).
 - [ ] Includes fake macOS traffic-light terminal card (`S-12`) and fictional logo bar (`S-10`).
+- [ ] App shell ships the starter sidebar: 8+ identical rows, tint-only active state, clipping collapse, mobile rail vanishes with no trigger (`S-18`).
 - [ ] All text meets WCAG AA contrast and respects `prefers-reduced-motion` (`E-03`).
