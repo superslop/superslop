@@ -42,9 +42,6 @@ const AGENTS = [
   // .claude/skills is opt-in compatibility, so it is not counted as a
   // second read here.
   { id: 'kilo', label: 'Kilo Code', dir: '.agents/skills', globalDir: '.agents/skills', entry: 'AGENTS.md' },
-  // Qoder reads .qoder/skills at both scopes, and it loads AGENTS.md as
-  // project rules, so a project install writes the pointer block there too.
-  { id: 'qoder', label: 'Qoder', dir: '.qoder/skills', globalDir: '.qoder/skills', entry: 'AGENTS.md' },
 ]
 
 const EXTRA_SKILLS = [
