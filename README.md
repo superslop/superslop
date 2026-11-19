@@ -13,7 +13,7 @@ While [`miqdadbadjuber/anti-slop`](https://github.com/miqdadbadjuber/anti-slop) 
 
 ## 🧠 What Does `superslop` Unleash?
 
-When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, DeepSeek Harness, Muse Code, or Kilo Code**, `superslop` guides your agent across **six modular skills**:
+When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, DeepSeek Harness, Muse Code, Kilo Code, or Qoder**, `superslop` guides your agent across **six modular skills**:
 
 | Skill Module | Domain | What It Mandates |
 | :--- | :--- | :--- |
@@ -108,6 +108,18 @@ node cli/index.mjs --yes
   muse plugins marketplace remove superslop
   ```
   Prefer copying folders instead? Muse Code also reads the shared `.agents/skills` folder at both scopes — and a project's `.claude/skills` and `.codex/skills` too, with the shared folder outranking both — and the interactive installer above lists it as an install target with the `AGENTS.md` pointer.
+- **Qoder (the Tenth Plugin Door ✨):**
+  *Loads `superslop` through Qoder's own plugin system — nothing is copied into your project. Qoder imports a plugin from a local folder, so clone this repository first:*
+  ```bash
+  git clone https://github.com/superslop/superslop.git
+  ```
+  *Then open **Settings > Plugins** in Qoder, click **+ Create Plugin**, and choose the import-from-local-folder option. Point it at the folder you cloned. Qoder reads `.qoder-plugin/plugin.json`, which points at the same `skills/` folder as every other door, so all six skills load from the plugin.*
+
+  *Qoder's documentation also names the skills directory route, with its agent flag: `npx skills add superslop/superslop -a qoder`. Pick one route, not both.*
+
+  Update: import the newer release over the installed plugin — pull the clone, then import the same folder again in **Settings > Plugins**. Start a new session afterwards.
+  Remove: open **Settings > Plugins**, find `superslop`, and remove it. That deletes the store copy. A folder install made with the installer above is separate and stays until you delete `.qoder/skills/` or `~/.qoder/skills/`.
+  Prefer copying folders instead? Qoder reads `.qoder/skills/` in a project and `~/.qoder/skills/` at user level, and it loads `AGENTS.md` as project rules, so a project install writes the pointer block there too — and the interactive installer above lists it as an install target.
 - **Kilo Code (installer target ✨):**
   *Kilo Code reads the shared `.agents/skills` folder at both scopes — the folder Antigravity, Codex, DeepSeek Harness, and Muse Code already share — so the interactive installer above lists it as an install target with the `AGENTS.md` pointer, and one copy is all it needs.*
 

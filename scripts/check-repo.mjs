@@ -98,6 +98,14 @@ check(cliSource.includes("id: 'kilo'"), 'cli/index.mjs installer lists Kilo Code
 check(/id: 'kilo'[^}]*dir: '\.agents\/skills'/.test(cliSource), "Kilo Code installer entry targets '.agents/skills'")
 check(!/id: 'kilo'[^}]*readsAlso/.test(cliSource), 'Kilo Code installer entry carries no readsAlso list')
 
+// Qoder plugin door (adapted from anti-slop v3.2.31): the installer entry
+// writes Qoder's own .qoder/skills folder at both scopes, and
+// .qoder-plugin/plugin.json points at the same skills/ folder, so a
+// Settings > Plugins import loads all six skills from this repository.
+check(fs.existsSync(path.join(ROOT, '.qoder-plugin', 'plugin.json')), '.qoder-plugin/plugin.json exists (Qoder plugin door)')
+check(cliSource.includes("id: 'qoder'"), 'cli/index.mjs installer lists Qoder (.qoder/skills target)')
+check(/id: 'qoder'[^}]*dir: '\.qoder\/skills'/.test(cliSource), "Qoder installer entry targets '.qoder/skills'")
+
 if (errors > 0) {
   console.error(`\n❌ ${errors} check(s) failed.`)
   process.exit(1)
