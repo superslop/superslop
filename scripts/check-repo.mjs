@@ -106,6 +106,15 @@ check(fs.existsSync(path.join(ROOT, '.qoder-plugin', 'plugin.json')), '.qoder-pl
 check(cliSource.includes("id: 'qoder'"), 'cli/index.mjs installer lists Qoder (.qoder/skills target)')
 check(/id: 'qoder'[^}]*dir: '\.qoder\/skills'/.test(cliSource), "Qoder installer entry targets '.qoder/skills'")
 
+// Qwen Code installer target (adapted from anti-slop v3.2.32): the
+// installer entry writes Qwen's own .qwen/skills folder in a project and
+// the shared .agents/skills folder globally, and a project install writes
+// the pointer block into QWEN.md, which Qwen loads beside AGENTS.md.
+check(cliSource.includes("id: 'qwen'"), 'cli/index.mjs installer lists Qwen Code (.qwen/skills target)')
+check(/id: 'qwen'[^}]*dir: '\.qwen\/skills'/.test(cliSource), "Qwen Code installer entry targets '.qwen/skills'")
+check(/id: 'qwen'[^}]*entry: 'QWEN\.md'/.test(cliSource), "Qwen Code installer entry names QWEN.md as its pointer file")
+check(/id: 'qwen'[^}]*readsAlso: \['\.agents\/skills'\]/.test(cliSource), "Qwen Code installer entry names the shared '.agents/skills' folder it also reads")
+
 if (errors > 0) {
   console.error(`\n❌ ${errors} check(s) failed.`)
   process.exit(1)

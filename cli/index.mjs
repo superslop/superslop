@@ -45,6 +45,11 @@ const AGENTS = [
   // Qoder reads .qoder/skills at both scopes, and it loads AGENTS.md as
   // project rules, so a project install writes the pointer block there too.
   { id: 'qoder', label: 'Qoder', dir: '.qoder/skills', globalDir: '.qoder/skills', entry: 'AGENTS.md' },
+  // Qwen Code reads .qwen/skills in a project and the shared .agents/skills at both
+  // scopes, and loads QWEN.md beside AGENTS.md, so its pointer entry is QWEN.md.
+  // The readsAlso list is descriptive: a global install writes the shared
+  // folder, which Qwen already reads, so no second copy is needed.
+  { id: 'qwen', label: 'Qwen Code', dir: '.qwen/skills', globalDir: '.agents/skills', readsAlso: ['.agents/skills'], entry: 'QWEN.md' },
 ]
 
 const EXTRA_SKILLS = [

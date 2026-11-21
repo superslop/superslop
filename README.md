@@ -13,7 +13,7 @@ While [`miqdadbadjuber/anti-slop`](https://github.com/miqdadbadjuber/anti-slop) 
 
 ## 🧠 What Does `superslop` Unleash?
 
-When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, DeepSeek Harness, Muse Code, Kilo Code, or Qoder**, `superslop` guides your agent across **six modular skills**:
+When loaded into **Claude Code, Cursor, Antigravity (`agy`), Codex, Windsurf, Cline, OpenCode, Kimi, DeepSeek Harness, Muse Code, Kilo Code, Qoder, or Qwen Code**, `superslop` guides your agent across **six modular skills**:
 
 | Skill Module | Domain | What It Mandates |
 | :--- | :--- | :--- |
@@ -124,6 +124,10 @@ node cli/index.mjs --yes
   *Kilo Code reads the shared `.agents/skills` folder at both scopes — the folder Antigravity, Codex, DeepSeek Harness, and Muse Code already share — so the interactive installer above lists it as an install target with the `AGENTS.md` pointer, and one copy is all it needs.*
 
   Kilo Code also documents a `.kilo/skills/` folder of its own, and it loads a project's `.claude/skills/` only when Claude Code Compatibility is enabled (off by default). Do not copy the skills to `.kilo/skills/` as well: Kilo does not document which copy wins.
+- **Qwen Code (installer target ✨):**
+  *Qwen Code reads `.qwen/skills/` in a project and the shared `.agents/skills` folder at both scopes — the folder Antigravity, Codex, DeepSeek Harness, Muse Code, and Kilo Code already share — and it loads `QWEN.md` beside `AGENTS.md`, so a project install writes the pointer block into `QWEN.md`. The interactive installer above lists it as an install target, and one copy is all it needs.*
+
+  Qwen reads the `allowedTools` frontmatter field and ignores an `allowed-tools` field written for another agent, so the shipped field stays inert there. The skills are plain prose and need no adaptation.
 - **Single-File Direct Fetch (for any LLM chat window):**
   Use the root [`superslop.md`](./superslop.md) or Cursor rule [`rules/superslop.mdc`](./rules/superslop.mdc).
 
